@@ -1062,8 +1062,9 @@
         </div>
     </div>
     <script>
-        const EXPIRY_DATE = "2026-06-16";
+        const EXPIRY_DATE = "2026-06-08";
         let recentPaymentsTable = [
+            
 
             { id: 1, date: "2026-06-04", tenantName: "إبراهيم محمد علي محمود", apartment: "سلطانة / 110", amount: 1300, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1300 | لـ1004 | من5547;مصطفى عوض  | 26/6/4 00:21" },
 { id: 2, date: "2026-06-04", tenantName: "سلمان احسان رحمن", apartment: "ع80 / 4", amount: 1666, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1666 | لـ0308 | من6592;عمر احسان عبدالواسع | 26/6/4 01:14" },
@@ -2360,11 +2361,18 @@
 { id: 96, apartment: "سلطانة / شقة 4 فيلا", tenantName: "عبدالناصر خلق مهران", paymentSystem: "شهري", overdueAmount: 4400, tillDate: "2026-07-01", monthlyRent: 900 },
 { id: 97, apartment: "سلطانة / شقة 3 فيلا", tenantName: "وسيم واجد حسين", paymentSystem: "شهري", overdueAmount: 900, tillDate: "2026-07-01", monthlyRent: 900 },
         
+
+
+
+
+
+        
         ];
         let allTransactionsTable = recentPaymentsTable.map(p => ({ id:p.id, date:p.date, tenantName:p.tenantName, amount:p.amount, type:p.type, description:p.description }));
         const overviewData = { buildingsCount:18, overdueCount:97, amountToBePaid:4723600, amountPaid:4134940, residentialOverdue:126521, commercialOverdue:462140 };
         let currentModal = null;
         const whatsappMessages = [
+
 
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 1000 <br> لـ8822 <br> من8193;وليد عبدالقادر <br> 26/5/1 23:51", info:"🕘 5/2/26 - 4:18 pm " },
 { type:"right", sender: "نظام متابعة الإيجارات", text:"🤵 وليد محمد عبدالقادر <br> 🏠ع84 / 2", info:"🕘 2026-05-02 | 💳 1,000 SAR" },
@@ -2765,13 +2773,13 @@
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية <br> مبلغ:SR 900 <br> الى:1812 <br> من:منصة ايجار <br> 26/6/4 16:57", info:"🕘 6/4/26 - 9:19 pm " },
 { type:"right", sender: "نظام متابعة الإيجارات", text:"✨", info:"🕘 2026-06-04 | 💳 900 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة بين حساباتك <br> مبلغ: SR 7500 <br> الى: 0308 <br> 26/6/4 22:17", info:"🕘 6/4/26 - 9:19 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"✨", info:"🕘 2026-06-04 | 💳 7,500 SAR" },
-
-        
+{ type:"right", sender: "نظام متابعة الإيجارات", text:"✨", info:"🕘 2026-06-04 | 💳 7,500 SAR" },    
         
         ];
         // updated tenants array with new fields: startDate, requiredMonths, amountDue, amountPaid
         let tenants = [
+
+
 
              [ "ع.2", "ع2 / 1", "عبدالرحمن علي محمد قاسم ", 1083, "paid", "2026-07-01", 0", "2025-07-01", 12, 13500, 13500 ], 
  [ "ع.2", "ع2 / 2", "محمد علي محمد قاسم ", 1250, "late", "2026-06-14", 750", "2025-03-14", 15, 18750, 18000 ], 
@@ -3066,7 +3074,7 @@
  [ "ع.سلطانة", "سلطانة / بدروم2", "علي اصغر ولي محمد", 600, "paid", "2026-07-01", 0", "2025-10-01", 9, 5400, 5400 ], 
  [ "ع.تجاري", "تجاري / 127_المحلات", "ريان محمد سليمان الجهني", 0, "paid", "2026-07-01", -86250", "2026-07-01", 0, 0, 86250 ], 
 
-            
+
         ];
         
         let tenantsObjects = tenants.map((t,i)=>({
@@ -3104,7 +3112,7 @@
             }); 
             cont.scrollTop = cont.scrollHeight; 
         }
-        function renderTenantsStats(){ const late=tenantsObjects.filter(t=>t.status==='late').length; document.getElementById('tenantsStatsGrid').innerHTML=`<div class="tenants-stat-card"><div class="info"><h3>كل المستأجرين</h3><div class="number">${tenantsObjects.length}</div></div><i class="fas fa-users"></i></div><div class="tenants-stat-card"><div class="info"><h3>المتأخرين منهم</h3><div class="number">${late}</div></div><i class="fas fa-exclamation-triangle"></i></div>`; }
+        function renderTenantsStats(){ const late=tenantsObjects.filter(t=>t.status==='late').length; document.getElementById('tenantsStatsGrid').innerHTML=`<div class="tenants-stat-card"><div class="info"><h3>عدد المستأجرين</h3><div class="number">${tenantsObjects.length}</div></div><i class="fas fa-users"></i></div><div class="tenants-stat-card"><div class="info"><h3>متأخر</h3><div class="number">${late}</div></div><i class="fas fa-exclamation-triangle"></i></div>`; }
         
         // Updated renderTenantsCards with collapsible extra details section (4 new fields) and without displaying the building row
         function renderTenantsCards(){ 
