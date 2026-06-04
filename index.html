@@ -1057,7 +1057,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="tabTenants" class="tab-content" style="display:none"><div class="card" style="padding: 0px 0px;"><div class="tenants-stats-grid" id="tenantsStatsGrid"></div><div class="filter-bar-tenants"><div class="building-tabs-grid" id="buildingTabsGrid"></div><div class="search-box-tenants"><i class="fas fa-search"></i><input type="text" id="tenantsSearchInput" placeholder="🔍 بحث باسم المستأجر أو العمارة"></div></div><div id="tenantsCardsContainer" class="cards-grid-tenants"></div><div class="footer-note"><i class="fas fa-credit-card"></i> نظام متابعة إيجارات العمائر — العملة (ر.س)</div></div></div>
+                <div id="tabTenants" class="tab-content" style="display:none"><div class="card" style="padding: 0px 0px;"><div class="tenants-stats-grid" id="tenantsStatsGrid"></div><div class="filter-bar-tenants"><div class="building-tabs-grid" id="buildingTabsGrid"></div><div class="search-box-tenants"><i class="fas fa-search"></i><input type="text" id="tenantsSearchInput" placeholder="🔍 بحث باسم المستأجر أو العمارة"></div></div><div id="tenantsCardsContainer" class="cards-grid-tenants"></div><div class="footer-note"><i class="fas fa-credit-card"></i>نظام متابعة إيجارات العمائر</div></div></div>
             </div>
         </div>
     </div>
@@ -2617,7 +2617,7 @@
             }); 
             cont.scrollTop = cont.scrollHeight; 
         }
-        function renderTenantsStats(){ const late=tenantsObjects.filter(t=>t.status==='late').length; document.getElementById('tenantsStatsGrid').innerHTML=`<div class="tenants-stat-card"><div class="info"><h3>عدد المستأجرين</h3><div class="number">${tenantsObjects.length}</div></div><i class="fas fa-users"></i></div><div class="tenants-stat-card"><div class="info"><h3>متأخر</h3><div class="number">${late}</div></div><i class="fas fa-exclamation-triangle"></i></div>`; }
+        function renderTenantsStats(){ const late=tenantsObjects.filter(t=>t.status==='late').length; document.getElementById('tenantsStatsGrid').innerHTML=`<div class="tenants-stat-card"><div class="info"><h3>كل المستأجرين</h3><div class="number">${tenantsObjects.length}</div></div><i class="fas fa-users"></i></div><div class="tenants-stat-card"><div class="info"><h3>المتأخرين</h3><div class="number">${late}</div></div><i class="fas fa-exclamation-triangle"></i></div>`; }
         
         // Updated renderTenantsCards with collapsible extra details section (4 new fields) and without displaying the building row
         function renderTenantsCards(){ 
