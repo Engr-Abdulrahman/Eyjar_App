@@ -258,7 +258,24 @@
         to { opacity: 1; transform: translateY(0); }
     }
 
-    /* نظرة عامة */
+    /* نظرة عامة - تم إزالة البلاطة (خلفية الكارد) */
+    #tabOverview .card {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* تبويبة السدادات الحديثة والمتأخرات - إزالة البلاطات الخلفية */
+    #tabPayments .card, #tabOverdue .card {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    
     .stats-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -268,7 +285,7 @@
     
     .stat-card {
         background: #1a1f2e;
-        border-radius: 20px;
+        border-radius: 8px; /* تم التعديل: تقليل نصف القطر من 20px إلى 8px */
         padding: 24px 16px;
         text-align: center;
         border: 1px solid rgba(212, 163, 115, 0.15);
@@ -769,7 +786,11 @@
         padding: 8px 12px;
         margin-bottom: 10px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        border: 1px solid rgba(212, 163, 115, 0.1);
+        border: 2px solid #a855f7; /* إضافة إطار أرجواني قرمزي */
+        transition: border 0.2s ease;
+    }
+    .filter-bar-tenants:focus-within {
+        border-color: #c084fc;
     }
     .building-tabs-grid {
         display: grid;
@@ -1039,9 +1060,9 @@
                 </div>
             </div>
             <div class="content-area">
-                <div id="tabOverview" class="tab-content"><div class="card"><div class="stats-grid" id="statsGrid"></div><div class="update-note" id="lastUpdateInfo"></div></div></div>
-                <div id="tabPayments" class="tab-content" style="display:none"><div class="card"><div class="section-header" onclick="toggleSection('paymentsSection')"><div class="section-title"><span>💰</span> السدادات الحديثة</div><span class="toggle-icon" id="paymentsIcon">⌵</span></div><div id="paymentsSection" class="collapsible-content open"><div id="paymentsContainer" class="payments-grid"></div></div></div></div>
-                <div id="tabOverdue" class="tab-content" style="display:none"><div class="card"><div class="section-header" onclick="toggleSection('overdueSection')"><div class="section-title"><span>⚠️</span> المبالغ المتأخرة</div><span class="toggle-icon" id="overdueIcon">⌵</span></div><div id="overdueSection" class="collapsible-content open"><div id="overdueContainer" class="overdue-grid"></div></div></div></div>
+                <div id="tabOverview" class="tab-content"><div class="stats-grid" id="statsGrid"></div><div class="update-note" id="lastUpdateInfo"></div></div>
+                <div id="tabPayments" class="tab-content" style="display:none"><div><div class="section-header" onclick="toggleSection('paymentsSection')"><div class="section-title"><span>💰</span> السدادات الحديثة</div><span class="toggle-icon" id="paymentsIcon">⌵</span></div><div id="paymentsSection" class="collapsible-content open"><div id="paymentsContainer" class="payments-grid"></div></div></div></div>
+                <div id="tabOverdue" class="tab-content" style="display:none"><div><div class="section-header" onclick="toggleSection('overdueSection')"><div class="section-title"><span>⚠️</span> المبالغ المتأخرة</div><span class="toggle-icon" id="overdueIcon">⌵</span></div><div id="overdueSection" class="collapsible-content open"><div id="overdueContainer" class="overdue-grid"></div></div></div></div>
                 <div id="tabWhatsapp" class="tab-content" style="display:none">
                     <div class="whatsapp-fixed-header">
                         <div class="whatsapp-header-sticky">
@@ -1062,7 +1083,7 @@
         </div>
     </div>
     <script>
-        const EXPIRY_DATE = "2026-06-08";
+        const EXPIRY_DATE = "2026-06-16";
         let recentPaymentsTable = [
             
             { id: 1, date: "2026-06-04", tenantName: "إبراهيم محمد علي محمود", apartment: "سلطانة / 110", amount: 1300, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1300 | لـ1004 | من5547;مصطفى عوض  | 26/6/4 00:21" },
@@ -2572,11 +2593,7 @@
 
 
 
-
-
-
-
-
+ 
 
 
             
