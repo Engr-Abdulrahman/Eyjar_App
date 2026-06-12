@@ -1087,7 +1087,6 @@
         const EXPIRY_DATE = "2026-06-16";
 
 
-
  let recentPaymentsTable = [
 { id: 1, date: "2026-06-10", tenantName: "باسل عبدالحليم عبدالرحيم امين محمد نعيم", apartment: "ع43 / 311", amount: 750, type: "منصة إيجار", description: "باسل عبدالحليم عبدالرحيم محمدنعيم | 10595282180 | رقم الفاتورة: 2512079086036 | في: 2026-06-10 | مبلغ 750 SAR", monthlyRent: 750, overdueAfter: 0, tillDate: "2026-07-05" },
 { id: 2, date: "2026-06-10", tenantName: "مجيب علي ماهيسار", apartment: "سلطانة / 205", amount: 550, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 550 | لـ1004 | من1572;مجيب يوسف | 26/6/7 21:06", monthlyRent: 550, overdueAfter: 0, tillDate: "2026-07-10" },
@@ -2200,14 +2199,12 @@
 
 
  ];
+let allTransactionsTable = recentPaymentsTable.map(p => ({ id:p.id, date:p.date, tenantName:p.tenantName, amount:p.amount, type:p.type, description:p.description }));
+const overviewData = { buildingsCount:18, overdueCount:76, amountToBePaid:4827691, amountPaid:4194571, residentialOverdue:101465, commercialOverdue:531657 };
 
 
 
         
-        let allTransactionsTable = recentPaymentsTable.map(p => ({ id:p.id, date:p.date, tenantName:p.tenantName, amount:p.amount, type:p.type, description:p.description }));
-        const overviewData = { buildingsCount:18, overdueCount:77, amountToBePaid:4830087, amountPaid:4189271, residentialOverdue:106765, commercialOverdue:534053 }
-
-            ;
         let currentModal = null;
         const whatsappMessages = [
 
