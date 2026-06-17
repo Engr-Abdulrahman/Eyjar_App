@@ -1085,14 +1085,15 @@
     </div>
     <script>
         const EXPIRY_DATE = "2026-06-26";
- let recentPaymentsTable = [
-{ id: 1, date: "2026-06-15", tenantName: "صالح سالم عمر باحاصل", apartment: "ع43 / 105", amount: 2700, type: "منصة إيجار", description: "صالح سالم عمر باحاصل | 10629716526 | رقم الفاتورة: 2604090129470 | في: 2026-06-15 | مبلغ 2700 SAR", monthlyRent: 900, overdueAfter: -1800, tillDate: "2026-07-01" },
+
+         let recentPaymentsTable = [
+{ id: 1, date: "2026-06-15", tenantName: "صالح سالم عمر باحاصل", apartment: "ع43 / 105", amount: 2700, type: "منصة إيجار", description: "صالح سالم عمر باحاصل | 10629716526 | رقم الفاتورة: 2604090129470 | في: 2026-06-15 | مبلغ 2700 SAR", monthlyRent: 900, overdueAfter: 0, tillDate: "2026-07-01" },
 { id: 2, date: "2026-06-15", tenantName: "هيثم احمد محمد كردي", apartment: "ع43 / 108", amount: 1100, type: "منصة إيجار", description: "هيثم احمد محمد كردي | 10115902546 | رقم الفاتورة: 2511255148267 | في: 2026-06-15 | مبلغ 1100 SAR", monthlyRent: 1100, overdueAfter: -1100, tillDate: "2026-07-01" },
 { id: 3, date: "2026-06-15", tenantName: "خالد المجتبى يب الشنقيطي", apartment: "سلطانة / 201", amount: 700, type: "منصة إيجار", description: "خالد المجتبي بن يب الشنقيطي | 10506263501 | رقم الفاتورة: 2605067255479 | في: 2026-06-15 | مبلغ 700 SAR", monthlyRent: 700, overdueAfter: 0, tillDate: "2026-07-01" },
 { id: 4, date: "2026-06-15", tenantName: "عايض معيض عوض العوفي", apartment: "ع35 / 4", amount: 1667, type: "منصة إيجار", description: "عايض معيض عوض العوفي | 10658370334 | رقم الفاتورة: 2508291414738 | في: 2026-06-15 | مبلغ 1667 SAR", monthlyRent: 1667, overdueAfter: -2, tillDate: "2026-07-01" },
 { id: 5, date: "2026-06-15", tenantName: "محمد عبدالحكم عبدالرحمن حسوبة", apartment: "ع93 / 10", amount: 7500, type: "منصة إيجار", description: "محمد عبدالحكم عبدالرحمن حموده | 10822921684 | رقم الفاتورة: 2606112636743 | في: 2026-06-15 | مبلغ 7500 SAR", monthlyRent: 1250, overdueAfter: 0, tillDate: "2026-12-15" },
 { id: 6, date: "2026-06-15", tenantName: "عبدالعزيز عيسي عمر", apartment: "ع93 / 15", amount: 1300, type: "تسليم نقدي", description: "تسليم نقدي: عبدالعزيز عيسى عمر _ 1300 رس _ سند رقم 5864 بتاريخ 15 يونيو.", monthlyRent: 1167, overdueAfter: -17, tillDate: "2026-07-01" },
-{ id: 7, date: "2026-06-14", tenantName: "صالح سالم عمر باحاصل", apartment: "ع43 / 105", amount: -1800, type: "حالة مخصوصة", description: "حالة مخصوصة: أ. صالح سالم ع43 غ105 دفع بالخطأ في موقع إيجار 2700 رس واستلم نقدا 1800 رس، وقد وقع إقرارا على ذلك.", monthlyRent: 900, overdueAfter: -1800, tillDate: "2026-07-01" },
+{ id: 7, date: "2026-06-14", tenantName: "صالح سالم عمر باحاصل", apartment: "ع43 / 105", amount: -1800, type: "حالة نقدية", description: "حالة مخصوصة: أ. صالح سالم ع43 غ105 دفع بالخطأ في موقع إيجار 2700 رس واستلم نقدا 1800 رس، وقد وقع إقرارا على ذلك.", monthlyRent: 900, overdueAfter: 0, tillDate: "2026-07-01" },
 { id: 8, date: "2026-06-13", tenantName: "فاطمه عبده محمد سيسي", apartment: "ع35 / 10", amount: 1000, type: "منصة إيجار", description: "FATIMA ABDOU MOHAMED CISSE | 10845345377 | رقم الفاتورة: 2510178837439 | في: 2026-06-13 | مبلغ 1000 SAR", monthlyRent: 2000, overdueAfter: 500, tillDate: "2026-07-01" },
 { id: 9, date: "2026-06-13", tenantName: "عبدالعزيز غلام سخي", apartment: "ع82 / 1", amount: 1084, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 1084 | لـ8822 | من3103;مكتب المعرفة العامة للخدمات العامة | 26/6/12 00:16", monthlyRent: 1083, overdueAfter: -3, tillDate: "2026-07-01" },
 { id: 10, date: "2026-06-13", tenantName: "احمد عبدالله عارف (غ405 و411)", apartment: "سلطانة / 405 | 411", amount: 550, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 550 | لـ1004 | من4178;محمد سليمان | 26/6/13 16:32", monthlyRent: 1100, overdueAfter: 1, tillDate: "2026-07-01" },
@@ -1547,7 +1548,7 @@
 { id: 459, date: "2026-03-31", tenantName: "أصيل مبارك محمد عبدالحق", apartment: "ع88 / 11", amount: 9000, type: "منصة إيجار", description: "اصيل مبارك محمد عبدالحق | 10243055157 | رقم الفاتورة: 2509240794533 | في: 2026-03-31 | مبلغ 9000 SAR", monthlyRent: 1500, overdueAfter: 0, tillDate: "2026-10-01" },
 { id: 460, date: "2026-03-30", tenantName: "إرشاد علي عبدالواحد", apartment: "سلطانة / بدروم1", amount: 550, type: "تسليم نقدي", description: "تسليم نقدي: ارشاد علي عبدالواحد _ 550 رس _ سند رقم 4674", monthlyRent: 550, overdueAfter: 0, tillDate: "2026-07-01" },
 { id: 461, date: "2026-03-30", tenantName: "أكمادسودين نسالي سولماري", apartment: "سلطانة / 301", amount: 700, type: "تحويل بنكي", description: "حوالة داخلية واردة | بـSAR 700 | لـ1004 | من6170;اكمادسودين سولماري | 26/3/29 16:08", monthlyRent: 700, overdueAfter: 0, tillDate: "2026-07-01" },
-{ id: 462, date: "2026-03-30", tenantName: "صالح سالم عمر باحاصل", apartment: "ع43 / 105", amount: 1100, type: "تحويل بنكي", description: "حوالة داخلية واردة | بـSAR 1100 | لـ1812 | من6734;صالح سالم عمر باحاصل | 26/3/29 19:01", monthlyRent: 900, overdueAfter: -1800, tillDate: "2026-07-01" },
+{ id: 462, date: "2026-03-30", tenantName: "صالح سالم عمر باحاصل", apartment: "ع43 / 105", amount: 1100, type: "تحويل بنكي", description: "حوالة داخلية واردة | بـSAR 1100 | لـ1812 | من6734;صالح سالم عمر باحاصل | 26/3/29 19:01", monthlyRent: 900, overdueAfter: 0, tillDate: "2026-07-01" },
 { id: 463, date: "2026-03-30", tenantName: "إيهاب محمد علي محمد", apartment: "ع43 / 103", amount: 850, type: "تحويل بنكي", description: "حوالة داخلية واردة | بـSAR 850 | لـ1812 | من4201;ايهاب محمد | 26/3/30 07:37", monthlyRent: 850, overdueAfter: 0, tillDate: "2026-07-01" },
 { id: 464, date: "2026-03-30", tenantName: "فهد مناور الحسيني", apartment: "ع43 / 409", amount: 1000, type: "تحويل بنكي", description: "حوالة داخلية واردة | بـSAR 1000 | لـ1812 | من6711;فهد مناور الحسيني | 26/3/30 13:03", monthlyRent: 1000, overdueAfter: 0, tillDate: "2026-07-01" },
 { id: 465, date: "2026-03-30", tenantName: "موسى صالح عواد الجهني", apartment: "سلطانة / 102", amount: 750, type: "تحويل بنكي", description: "حوالة داخلية واردة | بـSAR 750 | لـ1004 | من5049;موسى الجهني | 26/3/30 13:09", monthlyRent: 750, overdueAfter: 0, tillDate: "2026-07-01" },
@@ -1956,7 +1957,7 @@
 [ "ع.43", "ع43 / 103", "إيهاب محمد علي محمد ", 850, "paid", "2026-07-01", 0, "2026-01-01", 6, 5100, 5100 ],
 [ "ع.43", "ع43 / 104", "مصطفى عبدالحي سليم ", 850, "paid", "2026-07-01", 0, "2026-01-01", 6, 5100, 5100 ],
 [ "ع.43", "ع43 / 105 سابقا", "عمرو محمد محمد النجار ", 900, "paid", "2026-04-01", -900, "2026-01-01", 3, 2700, 3600 ],
-[ "ع.43", "ع43 / 105", "صالح سالم عمر باحاصل", 900, "paid", "2026-07-01", -1800, "2026-05-01", 2, 2000, 3800 ],
+[ "ع.43", "ع43 / 105", "صالح سالم عمر باحاصل", 900, "paid", "2026-07-01", 0, "2026-05-01", 2, 2000, 2000 ],
 [ "ع.43", "ع43 / 106", "حسن عبداللطيف الحرايري", 750, "late", "2026-07-01", 1650, "2025-09-01", 10, 7500, 5850 ],
 [ "ع.43", "ع43 / 107 سابقا", "عبدالرحمن عبدالله حمد العبود", 600, "paid", "2026-06-10", 0, "2026-01-10", 5, 3000, 3000 ],
 [ "ع.43", "ع43 / 107", "حسناء سيد محمد زكي", 700, "paid", "2026-07-01", 0, "2026-06-01", 1, 500, 500 ],
@@ -2198,7 +2199,7 @@
 
  ];
 let allTransactionsTable = recentPaymentsTable.map(p => ({ id:p.id, date:p.date, tenantName:p.tenantName, amount:p.amount, type:p.type, description:p.description }));
-const overviewData = { buildingsCount:18, overdueCount:68, amountToBePaid:4851741, amountPaid:4220722, residentialOverdue:98113, commercialOverdue:532907 };
+const overviewData = { buildingsCount:18, overdueCount:68, amountToBePaid:4851741, amountPaid:4218922, residentialOverdue:99913, commercialOverdue:532907 };
 
         let currentModal = null;
         const whatsappMessages = [
