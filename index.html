@@ -1255,7 +1255,7 @@
 
  let recentPaymentsTable = [
 { id: 1, date: "2026-07-08", tenantName: "ولاء محمد محمود عبدالعزيز", apartment: "ع30 / 12", amount: 1000, type: "منصة إيجار", description: "ولاء محمد محمود عبد العزيز | 10861927441 | رقم الفاتورة: 2503137485025 | في: 2026-07-08 | مبلغ 1000 SAR", monthlyRent: 1500, overdueAfter: 2999, tillDate: "2026-08-01" },
-{ id: 2, date: "2026-07-08", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: 9450, type: "منصة إيجار", description: "مهند عبدالله سالم الحجوري | 10690455087 | رقم الفاتورة: 2507030788018 | في: 2026-07-08 | مبلغ 9450 SAR", monthlyRent: 1050, overdueAfter: -9450, tillDate: "2026-09-01" },
+{ id: 2, date: "2026-07-08", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: 9450, type: "منصة إيجار", description: "مهند عبدالله سالم الحجوري | 10690455087 | رقم الفاتورة: 2507030788018 | في: 2026-07-08 | مبلغ 9450 SAR", monthlyRent: 1050, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 3, date: "2026-07-08", tenantName: "علي الحسن علي المالكي", apartment: "ع93 / 11", amount: 7500, type: "منصة إيجار", description: "علي بن الحسن بن علي المالكي | 10014752185 | رقم الفاتورة: 2607070231660 | في: 2026-07-08 | مبلغ 7500 SAR", monthlyRent: 1083, overdueAfter: -7500, tillDate: "2026-08-01" },
 { id: 4, date: "2026-07-08", tenantName: "محمد احمد الأمين مدني", apartment: "ع86 / 5", amount: 11000, type: "منصة إيجار", description: "محمد احمد الامين مدنى | 10531348962 | رقم الفاتورة: 2607077249634 | في: 2026-07-08 | مبلغ 11000 SAR", monthlyRent: 1667, overdueAfter: -1000, tillDate: "2027-01-01" },
 { id: 5, date: "2026-07-08", tenantName: "الصديق علي طلحه الطيب", apartment: "ع86 / 1", amount: 1000, type: "منصة إيجار", description: "الصديق على طلحه الطيب | 10090087272 | رقم الفاتورة: 2509117821903 | في: 2026-07-08 | مبلغ 1000 SAR", monthlyRent: 1000, overdueAfter: 0, tillDate: "2026-08-01" },
@@ -2150,7 +2150,7 @@
 [ "ع.43", "ع43 / 304", "عايض فارس بن عايض الرشيدي", 1000, "late", "2026-08-01", 1500, "2025-11-01", 9, 9000, 7500 ],
 [ "ع.43", "ع43 / 306", "عطيه مبروك مبارك ", 750, "paid", "2026-08-08", 0, "2026-01-08", 7, 5250, 5250 ],
 [ "ع.43", "ع43 / 307", "محمد فريد العيسوي", 600, "paid", "2026-08-03", 0, "2026-01-03", 7, 4200, 4200 ],
-[ "ع.43", "ع43 / 308", "مهند عبدالله سالم الحجوري", 1050, "paid", "2026-09-01", -9450, "2025-09-01", 12, 12600, 22050 ],
+[ "ع.43", "ع43 / 308", "مهند عبدالله سالم الحجوري", 1050, "paid", "2026-09-01", 0, "2025-09-01", 12, 12600, 12600 ],
 [ "ع.43", "ع43 / 309", "عماد مهل صالح العنزي", 1000, "paid", "2026-08-01", 0, "2026-01-01", 7, 7000, 7000 ],
 [ "ع.43", "ع43 / 310 سابقا", "فياض مزمل خان", 850, "paid", "2026-05-25", 0, "2025-12-25", 5, 4250, 4250 ],
 [ "ع.43", "ع43 / 310", "سهيل عابد حسين أحمد", 850, "paid", "2026-07-25", 0, "2026-05-25", 2, 1850, 1850 ],
@@ -2366,7 +2366,7 @@
 
  ];
 let allTransactionsTable = recentPaymentsTable.map(p => ({ id:p.id, date:p.date, tenantName:p.tenantName, amount:p.amount, type:p.type, description:p.description }));
-const overviewData = { buildingsCount:18, overdueCount:78, amountToBePaid:5325122, amountPaid:4515713, residentialOverdue:137315, commercialOverdue:672094 };
+const overviewData = { buildingsCount:18, overdueCount:78, amountToBePaid:5325122, amountPaid:4506263, residentialOverdue:146765, commercialOverdue:672094 };
 
         
         let currentModal = null;
