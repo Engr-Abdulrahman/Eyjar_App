@@ -1106,6 +1106,177 @@
         }
         .content-area { padding-bottom: 0; }
     }
+    
+    /* ===== تبويبة العمائر ===== */
+    #tabBuildings .card {
+        background: transparent;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .buildings-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .building-card {
+        background: #141824;
+        border-radius: 1px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+    
+    .building-card:hover {
+        border-color: rgba(212, 163, 115, 0.25);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    }
+    
+    .building-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 18px;
+        background: linear-gradient(135deg, #1a1f2e, #0f121f);
+        border-bottom: 1px solid transparent;
+        user-select: none;
+        gap: 12px;
+        flex-wrap: wrap;
+        border-radius: 1px;
+    }
+    
+    .building-header .building-name {
+        font-size: 20px;
+        font-weight: 800;
+        color: #fbbf24;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .building-header .building-name .toggle-icon {
+        font-size: 16px;
+        transition: transform 0.3s ease;
+        color: #94a3b8;
+    }
+    
+    .building-header .building-name .toggle-icon.open {
+        transform: rotate(180deg);
+    }
+    
+    .building-header .building-stats {
+        display: flex;
+        gap: 0px;
+        align-items: center;
+        flex-wrap: wrap;
+        background: #0f121f;
+        border-radius: 1px;
+        overflow: hidden;
+    }
+    
+    .building-header .stat-badge {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: #0f121f;
+        padding: 4px 14px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #94a3b8;
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    
+    .building-header .stat-badge:last-child {
+        border-left: none;
+    }
+    
+    .building-header .stat-badge .badge-number {
+        font-weight: 800;
+        font-size: 16px;
+    }
+    
+    .building-header .stat-badge .badge-number.red { color: #f87171; }
+    .building-header .stat-badge .badge-number.green { color: #4ade80; }
+    .building-header .stat-badge .badge-number.blue { color: #60a5fa; }
+    .building-header .stat-badge .badge-number.gold { color: #fbbf24; }
+    
+    .building-details {
+        background: #0f121f;
+        display: none;
+        padding: 14px 18px;
+        border-radius: 1px;
+    }
+    
+    .building-details.open {
+        display: block;
+    }
+    
+    .building-details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    
+    .building-detail-item {
+        background: #1a1f2e;
+        border-radius: 1px;
+        padding: 12px 14px;
+        text-align: center;
+    }
+    
+    .building-detail-item .detail-label {
+        font-size: 11px;
+        color: #94a3b8;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 4px;
+    }
+    
+    .building-detail-item .detail-value {
+        font-size: 22px;
+        font-weight: 800;
+    }
+    
+    .building-detail-item .detail-value.red { color: #f87171; }
+    .building-detail-item .detail-value.green { color: #4ade80; }
+    .building-detail-item .detail-value.gold { color: #fbbf24; }
+    .building-detail-item .detail-value.blue { color: #60a5fa; }
+    .building-detail-item .detail-value.purple { color: #a78bfa; }
+    
+    .building-detail-item .detail-sub {
+        font-size: 10px;
+        color: #64748b;
+        margin-top: 2px;
+    }
+    
+    @media (max-width: 576px) {
+        .building-header {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 8px;
+        }
+        .building-header .building-stats {
+            justify-content: space-around;
+        }
+        .building-header .stat-badge {
+            font-size: 11px;
+            padding: 3px 10px;
+        }
+        .building-header .stat-badge .badge-number {
+            font-size: 13px;
+        }
+        .building-details-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .building-detail-item .detail-value {
+            font-size: 18px;
+        }
+    }
 </style>
 </head>
 <body>
@@ -1129,6 +1300,7 @@
                 <div class="tabs-container">
                     <div class="tabs-row">
                         <button class="tab-button active" data-tab="overview"><span>📊 نظرة عامة</span></button>
+                        <button class="tab-button" data-tab="buildings"><span>🏢 العمائر</span></button>
                         <button class="tab-button" data-tab="tenants"><span>📋 المستأجرين</span></button>
                     </div>
                     <div class="tabs-row">
@@ -1158,11 +1330,19 @@
                     </div>
                 </div>
                 <div id="tabTenants" class="tab-content" style="display:none"><div class="card" style="padding: 0px 0px;"><div class="tenants-stats-grid" id="tenantsStatsGrid"></div><div class="filter-bar-tenants"><div class="building-tabs-grid" id="buildingTabsGrid"></div><div class="search-box-tenants"><i class="fas fa-search"></i><input type="text" id="tenantsSearchInput" placeholder="🔍 بحث باسم المستأجر أو العمارة"></div></div><div id="tenantsCardsContainer" class="cards-grid-tenants"></div><div class="footer-note"><i class="fas fa-credit-card"></i>نظام متابعة إيجارات العمائر</div></div></div>
+                <!-- تبويبة العمائر الجديدة -->
+                <div id="tabBuildings" class="tab-content" style="display:none">
+                    <div class="card" style="padding: 0px 0px;">
+                        <div class="buildings-grid" id="buildingsContainer"></div>
+                        <div class="footer-note"><i class="fas fa-building"></i> إحصائيات كل عمارة على حدة</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script>
         const EXPIRY_DATE = "2026-08-08";
+        
  let recentPaymentsTable = [
 { id: 1, date: "2026-07-27", tenantName: "سليمان عبدالله محمد طاهر", apartment: "ع86 / 4", amount: 1667, type: "منصة إيجار", description: "SOULEYMAN ABDALLAH MAHAMAT TAHIR | 10856321208 | رقم الفاتورة: 2605199982662 | في: 2026-07-27 | مبلغ 1667 SAR", monthlyRent: 1333, overdueAfter: -1668, tillDate: "2026-08-01" },
 { id: 2, date: "2026-07-27", tenantName: "حمزة طارق عبدالمالك", apartment: "ع93 / 6", amount: 1250, type: "منصة إيجار", description: "حمزه طارق عبدالمالك | 10057845484 | رقم الفاتورة: 2512073573133 | في: 2026-07-27 | مبلغ 1250 SAR", monthlyRent: 1250, overdueAfter: -750, tillDate: "2026-08-08" },
@@ -2842,18 +3022,142 @@ const overviewData = { buildingsCount:18, overdueCount:59, amountToBePaid:535202
             }); 
         }
         
+        // ===== دالة عرض تبويبة العمائر =====
+        function renderBuildings() {
+            // تجميع المستأجرين حسب العمارة
+            const buildingMap = {};
+            tenantsObjects.forEach(t => {
+                if (!buildingMap[t.building]) {
+                    buildingMap[t.building] = {
+                        tenants: [],
+                        totalOverdue: 0,
+                        overdueCount: 0,
+                        totalRent: 0
+                    };
+                }
+                buildingMap[t.building].tenants.push(t);
+                // جمع المتأخرات (القيم الموجبة فقط)
+                if (t.overdueAmount > 0) {
+                    buildingMap[t.building].totalOverdue += t.overdueAmount;
+                    buildingMap[t.building].overdueCount++;
+                }
+                buildingMap[t.building].totalRent += t.rent;
+            });
+            
+            const container = document.getElementById('buildingsContainer');
+            container.innerHTML = '';
+            
+            // ترتيب العمائر حسب الاسم
+            const buildingNames = Object.keys(buildingMap).sort();
+            
+            buildingNames.forEach(buildingName => {
+                const data = buildingMap[buildingName];
+                const totalTenants = data.tenants.length;
+                const overdueCount = data.overdueCount;
+                const totalOverdue = data.totalOverdue;
+                const totalMonthlyRent = data.totalRent;
+                
+                // تنسيق الأرقام المختصرة (k, M)
+                const formatShort = (num) => {
+                    if (num >= 1000000) return (num / 1000000).toFixed(2).replace(/\.?0+$/, '') + 'M';
+                    if (num >= 1000) return (num / 1000).toFixed(1).replace(/\.?0+$/, '') + 'k';
+                    return num.toString();
+                };
+                
+                const buildingId = 'building-' + buildingName.replace(/[^a-zA-Z0-9]/g, '-');
+                
+                const card = document.createElement('div');
+                card.className = 'building-card';
+                card.innerHTML = `
+                    <div class="building-header" data-building="${buildingId}">
+                        <div class="building-name">
+                            🏢 ${escapeHtml(buildingName)}
+                            <span class="toggle-icon">▾</span>
+                        </div>
+                        <div class="building-stats">
+                            <div class="stat-badge">
+                                👥 <span class="badge-number blue">${totalTenants}</span>
+                            </div>
+                            <div class="stat-badge">
+                                ⚠️ <span class="badge-number red">${overdueCount}</span>
+                            </div>
+                            ${totalOverdue > 0 ? `
+                            <div class="stat-badge">
+                                📉 <span class="badge-number red">${formatShort(totalOverdue)}</span>
+                            </div>
+                            ` : `
+                            <div class="stat-badge">
+                                📉 <span class="badge-number green">٠</span>
+                            </div>
+                            `}
+                        </div>
+                    </div>
+                    <div class="building-details" id="${buildingId}">
+                        <div class="building-details-grid">
+                            <div class="building-detail-item">
+                                <span class="detail-label">👥 عدد المستأجرين</span>
+                                <span class="detail-value blue">${totalTenants}</span>
+                                <span class="detail-sub">مستأجر</span>
+                            </div>
+                            <div class="building-detail-item">
+                                <span class="detail-label">⚠️ المتأخرين عن السداد</span>
+                                <span class="detail-value red">${overdueCount}</span>
+                                <span class="detail-sub">مستأجر</span>
+                            </div>
+                            <div class="building-detail-item">
+                                <span class="detail-label">💰 إجمالي الإيجار الشهري</span>
+                                <span class="detail-value gold">${totalMonthlyRent.toLocaleString()}</span>
+                                <span class="detail-sub">ريال / شهر</span>
+                            </div>
+                            <div class="building-detail-item">
+                                <span class="detail-label">📉 إجمالي المتأخرات</span>
+                                <span class="detail-value ${totalOverdue > 0 ? 'red' : 'green'}">${totalOverdue > 0 ? totalOverdue.toLocaleString() : '٠'}</span>
+                                <span class="detail-sub">${totalOverdue > 0 ? 'ريال' : 'لا يوجد متأخرات'}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            
+            // إضافة حدث الضغط على الهيدر لفتح/إغلاق التفاصيل
+            container.querySelectorAll('.building-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    const buildingId = this.getAttribute('data-building');
+                    const details = document.getElementById(buildingId);
+                    const icon = this.querySelector('.toggle-icon');
+                    if (details) {
+                        details.classList.toggle('open');
+                        if (icon) {
+                            icon.classList.toggle('open');
+                        }
+                    }
+                });
+            });
+        }
+        
         function switchTab(tabId){ 
             document.querySelectorAll('.tab-content').forEach(t=>t.style.display='none'); 
-            document.getElementById(`tab${tabId.charAt(0).toUpperCase()+tabId.slice(1)}`).style.display='block'; 
+            const tabMap = {
+                'overview': 'tabOverview',
+                'buildings': 'tabBuildings',
+                'tenants': 'tabTenants',
+                'payments': 'tabPayments',
+                'overdue': 'tabOverdue',
+                'whatsapp': 'tabWhatsapp'
+            };
+            const targetId = tabMap[tabId] || `tab${tabId.charAt(0).toUpperCase()+tabId.slice(1)}`;
+            document.getElementById(targetId).style.display='block'; 
             document.querySelectorAll('.tab-button').forEach(b=>b.classList.remove('active')); 
             document.querySelector(`.tab-button[data-tab="${tabId}"]`).classList.add('active'); 
             if(tabId==='overview') renderOverview(); 
             else if(tabId==='payments') renderRecentPayments(); 
             else if(tabId==='overdue') renderOverdueList(); 
             else if(tabId==='whatsapp') renderWhatsApp(); 
-            else if(tabId==='tenants'){ renderTenantsStats(); buildBuildingTabsTenants(); renderTenantsCards(); } 
+            else if(tabId==='tenants'){ renderTenantsStats(); buildBuildingTabsTenants(); renderTenantsCards(); }
+            else if(tabId==='buildings'){ renderBuildings(); }
         }
-        function initializeApp(){ renderOverview(); renderRecentPayments(); renderOverdueList(); document.querySelectorAll('.tab-button').forEach(btn=>btn.addEventListener('click',()=>switchTab(btn.getAttribute('data-tab')))); document.getElementById('tenantsSearchInput')?.addEventListener('input',(e)=>{ searchKeywordTenants=e.target.value; renderTenantsCards(); }); }
+        function initializeApp(){ renderOverview(); renderRecentPayments(); renderOverdueList(); renderBuildings(); document.querySelectorAll('.tab-button').forEach(btn=>btn.addEventListener('click',()=>switchTab(btn.getAttribute('data-tab')))); document.getElementById('tenantsSearchInput')?.addEventListener('input',(e)=>{ searchKeywordTenants=e.target.value; renderTenantsCards(); }); }
         
         // إزالة شاشة البداية بعد 2.5 ثانية
         setTimeout(() => {
