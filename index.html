@@ -1342,7 +1342,9 @@
     </div>
     <script>
         const EXPIRY_DATE = "2026-08-18";
- let recentPaymentsTable = [
+
+
+         let recentPaymentsTable = [
 { id: 1, date: "2026-08-09", tenantName: "سالم عايض عويض السحيمي الحربي", apartment: "ع43 / 211", amount: 700, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 700 | لـ1812 | من3111;اثير الحربي | 26/8/8 12:37", monthlyRent: 700, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 2, date: "2026-08-09", tenantName: "ناصر محمد عبدالناصر الحبيب", apartment: "ع35 / 9", amount: 11500, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 11500 | لـ2908 | من1792;ناصر الحبيب | 26/8/8 22:16", monthlyRent: 1917, overdueAfter: -11500, tillDate: "2026-09-08" },
 { id: 3, date: "2026-08-09", tenantName: "عبدالنصير بونجا جويامد", apartment: "سلطانة / 308", amount: 800, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 800 | لـ1004 | من2829;عبدالنصير جوياماد | 26/8/8 23:28", monthlyRent: 800, overdueAfter: -800, tillDate: "2026-08-15" },
@@ -1354,27 +1356,27 @@
 { id: 9, date: "2026-08-06", tenantName: "اسلام خالد سرور إبراهيم سرور", apartment: "ع43 / 205", amount: 900, type: "منصة إيجار", description: "اسلام خالد سرور ابراهيم سرور | 10302114922 | رقم الفاتورة: 2508017425767 | في: 2026-08-06 | مبلغ 900 SAR", monthlyRent: 900, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 10, date: "2026-08-06", tenantName: "عبدالبديع محمد علي برناوي", apartment: "ع35 / 1", amount: 1350, type: "منصة إيجار", description: "عبد البديع بن محمد بن علي برناوي | 10463418496 | رقم الفاتورة: 2602052377386 | في: 2026-08-06 | مبلغ 1350 SAR", monthlyRent: 1167, overdueAfter: 980, tillDate: "2026-08-20" },
 { id: 11, date: "2026-08-06", tenantName: "محمد محمود أحمد غازي", apartment: "سلطانة / 202", amount: 750, type: "منصة إيجار", description: "محمد محمود احمد غازي | 10126337349 | رقم الفاتورة: 2512031784536 | في: 2026-08-06 | مبلغ 750 SAR", monthlyRent: 750, overdueAfter: 750, tillDate: "2026-09-01" },
-{ id: 12, date: "2026-08-06", tenantName: "إسلام أحمد أخضر", apartment: "سلطانة / 403", amount: 300, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 300 | لـ1004 | من8181;احمد عبدالغفار | 26/8/5 23:29", monthlyRent: 650, overdueAfter: -650, tillDate: "2026-08-15" },
-{ id: 13, date: "2026-08-06", tenantName: "سليمان سالم هنيدي العوفي", apartment: "سلطانة / 107", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من4844;سليمان سالم هنيدي العوفي | 26/8/6 23:53", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 14, date: "2026-08-06", tenantName: "عبدالعزيز غلام سخي", apartment: "ع82 / 1", amount: 1084, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 1084 | لـ8822 | من3103;مكتب المعرفة العامة للخدمات العامة | 26/8/6 00:15", monthlyRent: 1083, overdueAfter: 1080, tillDate: "2026-09-01" },
-{ id: 15, date: "2026-08-06", tenantName: "مجيب علي ماهيسار", apartment: "سلطانة / 205", amount: 550, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 550 | لـ1004 | من1572;مجيب يوسف | 26/8/6 01:18", monthlyRent: 550, overdueAfter: 0, tillDate: "2026-09-10" },
-{ id: 16, date: "2026-08-06", tenantName: "محمد احمد قرشي تركي", apartment: "سلطانة / الملحق", amount: 1000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1000 | لـ1004 | من4285;محمد تركى | 26/8/6 05:32", monthlyRent: 1000, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 17, date: "2026-08-06", tenantName: "حاتم عبدالحميد السيد ضيف", apartment: "ع40 / 5", amount: 1500, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1500 | لـ1002 | من3737;حاتم ضيف | 26/8/6 11:57", monthlyRent: 1500, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 18, date: "2026-08-06", tenantName: "عبدالله محمد حسين محمد", apartment: "ع43 / الارضى", amount: 600, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 600 | لـ1812 | من7222;عبدالله محمد | 26/8/6 21:14", monthlyRent: 600, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 19, date: "2026-08-06", tenantName: "سيد فؤاد جمعة أحمد", apartment: "ع40 / 8", amount: 1500, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 1500 | لـ1002 | من0018;SAYED AHMED | 26/8/6 23:23", monthlyRent: 1500, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 20, date: "2026-08-06", tenantName: "محمد مناحي عبدالرحمن القحطاني (ع40)", apartment: "ع40 / 4", amount: 24000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 24000 | لـ1002 | من7625;سعود الربيعان | 26/8/6 12:28", monthlyRent: 2000, overdueAfter: 0, tillDate: "2027-01-01" },
-{ id: 21, date: "2026-08-05", tenantName: "محمد إبراهيم شريف حسن", apartment: "ع84 / 1", amount: 1000, type: "منصة إيجار", description: "محمد ابراهيم شريف حسن | 10233838889 | رقم الفاتورة: 2606263650944 | في: 2026-08-05 | مبلغ 1000 SAR", monthlyRent: 1000, overdueAfter: 450, tillDate: "2026-09-01" },
-{ id: 22, date: "2026-08-05", tenantName: "صالح سالم عمر باحاصل", apartment: "ع43 / 105", amount: 900, type: "منصة إيجار", description: "صالح سالم عمر باحاصل | 10629716526 | رقم الفاتورة: 2604090129470 | في: 2026-08-05 | مبلغ 900 SAR", monthlyRent: 900, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 23, date: "2026-08-05", tenantName: "اديب نادر اديب زرين", apartment: "ع84 / 7", amount: 11000, type: "منصة إيجار", description: "اديب نادر اديب زرين | 10313426056 | رقم الفاتورة: 2608044557439 | في: 2026-08-05 | مبلغ 11000 SAR", monthlyRent: 1833, overdueAfter: 0, tillDate: "2027-02-01" },
-{ id: 24, date: "2026-08-05", tenantName: "محمد محمود عبدالعظيم عبدالرحمن", apartment: "ع43 / 402", amount: 750, type: "منصة إيجار", description: "محمد محمود عبدالعظيم عبدالرحمن | 10125690978 | رقم الفاتورة: 2608045767252 | في: 2026-08-05 | مبلغ 750 SAR", monthlyRent: 1000, overdueAfter: 250, tillDate: "2026-09-03" },
-{ id: 25, date: "2026-08-05", tenantName: "عايض معيض عوض العوفي", apartment: "ع35 / 4", amount: 3330, type: "منصة إيجار", description: "عايض معيض عوض العوفي | 10658370334 | رقم الفاتورة: 2508291414738 | في: 2026-08-05 | مبلغ 3330 SAR", monthlyRent: 1667, overdueAfter: 376, tillDate: "2026-09-01" },
-{ id: 26, date: "2026-08-05", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: 125, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 125 | لـ1812 | من7873;مهند الحجوري | 26/8/3 21:46", monthlyRent: 1050, overdueAfter: -125, tillDate: "2026-09-01" },
-{ id: 27, date: "2026-08-05", tenantName: "محل5 - خلود عوض عويض الرشيدي (عرفان الحلاق)", apartment: "تجاري / 43_محل5", amount: 1150, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1150 | لـ1812 | من8265;محمد اقبال | 26/8/3 22:55", monthlyRent: 1150, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 28, date: "2026-08-05", tenantName: "ربيع عبدالواحد محمد عبدالواحد", apartment: "سلطانة / 402", amount: 700, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 700 | لـ1004 | من5030;ربيع عبدالواحد | 26/8/3 23:03", monthlyRent: 750, overdueAfter: 50, tillDate: "2026-09-05" },
-{ id: 29, date: "2026-08-05", tenantName: "زار محمد شير محمد", apartment: "سلطانة / 304", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من3498;زار محمد محمد | 26/8/4 11:44", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-09-07" },
-{ id: 30, date: "2026-08-05", tenantName: "أحمد عبدالرحمن أحمد", apartment: "ع93 / 3", amount: 2000, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 2000 | لـ8882 | من5709;ما رية شيت علي | 26/8/5 00:28", monthlyRent: 750, overdueAfter: 1500, tillDate: "2026-09-08" },
-{ id: 31, date: "2026-08-05", tenantName: "إسلام أحمد أخضر", apartment: "سلطانة / 403", amount: 1000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1000 | لـ1004 | من8181;احمد عبدالغفار | 26/8/5 01:14", monthlyRent: 650, overdueAfter: -650, tillDate: "2026-08-15" },
-{ id: 32, date: "2026-08-05", tenantName: "أحمد علي السيد الدبيكي", apartment: "سلطانة / 407", amount: 600, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 600 | لـ1004 | من2095;احمد الدبيكى | 26/8/5 21:46", monthlyRent: 600, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 12, date: "2026-08-06", tenantName: "سليمان سالم هنيدي العوفي", apartment: "سلطانة / 107", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من4844;سليمان سالم هنيدي العوفي | 26/8/6 23:53", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 13, date: "2026-08-06", tenantName: "عبدالعزيز غلام سخي", apartment: "ع82 / 1", amount: 1084, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 1084 | لـ8822 | من3103;مكتب المعرفة العامة للخدمات العامة | 26/8/6 00:15", monthlyRent: 1083, overdueAfter: 1080, tillDate: "2026-09-01" },
+{ id: 14, date: "2026-08-06", tenantName: "مجيب علي ماهيسار", apartment: "سلطانة / 205", amount: 550, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 550 | لـ1004 | من1572;مجيب يوسف | 26/8/6 01:18", monthlyRent: 550, overdueAfter: 0, tillDate: "2026-09-10" },
+{ id: 15, date: "2026-08-06", tenantName: "محمد احمد قرشي تركي", apartment: "سلطانة / الملحق", amount: 1000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1000 | لـ1004 | من4285;محمد تركى | 26/8/6 05:32", monthlyRent: 1000, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 16, date: "2026-08-06", tenantName: "حاتم عبدالحميد السيد ضيف", apartment: "ع40 / 5", amount: 1500, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1500 | لـ1002 | من3737;حاتم ضيف | 26/8/6 11:57", monthlyRent: 1500, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 17, date: "2026-08-06", tenantName: "عبدالله محمد حسين محمد", apartment: "ع43 / الارضى", amount: 600, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 600 | لـ1812 | من7222;عبدالله محمد | 26/8/6 21:14", monthlyRent: 600, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 18, date: "2026-08-06", tenantName: "سيد فؤاد جمعة أحمد", apartment: "ع40 / 8", amount: 1500, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 1500 | لـ1002 | من0018;SAYED AHMED | 26/8/6 23:23", monthlyRent: 1500, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 19, date: "2026-08-06", tenantName: "محمد مناحي عبدالرحمن القحطاني (ع40)", apartment: "ع40 / 4", amount: 24000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 24000 | لـ1002 | من7625;سعود الربيعان | 26/8/6 12:28", monthlyRent: 2000, overdueAfter: 0, tillDate: "2027-01-01" },
+{ id: 20, date: "2026-08-05", tenantName: "محمد إبراهيم شريف حسن", apartment: "ع84 / 1", amount: 1000, type: "منصة إيجار", description: "محمد ابراهيم شريف حسن | 10233838889 | رقم الفاتورة: 2606263650944 | في: 2026-08-05 | مبلغ 1000 SAR", monthlyRent: 1000, overdueAfter: 450, tillDate: "2026-09-01" },
+{ id: 21, date: "2026-08-05", tenantName: "صالح سالم عمر باحاصل", apartment: "ع43 / 105", amount: 900, type: "منصة إيجار", description: "صالح سالم عمر باحاصل | 10629716526 | رقم الفاتورة: 2604090129470 | في: 2026-08-05 | مبلغ 900 SAR", monthlyRent: 900, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 22, date: "2026-08-05", tenantName: "اديب نادر اديب زرين", apartment: "ع84 / 7", amount: 11000, type: "منصة إيجار", description: "اديب نادر اديب زرين | 10313426056 | رقم الفاتورة: 2608044557439 | في: 2026-08-05 | مبلغ 11000 SAR", monthlyRent: 1833, overdueAfter: 0, tillDate: "2027-02-01" },
+{ id: 23, date: "2026-08-05", tenantName: "محمد محمود عبدالعظيم عبدالرحمن", apartment: "ع43 / 402", amount: 750, type: "منصة إيجار", description: "محمد محمود عبدالعظيم عبدالرحمن | 10125690978 | رقم الفاتورة: 2608045767252 | في: 2026-08-05 | مبلغ 750 SAR", monthlyRent: 1000, overdueAfter: 250, tillDate: "2026-09-03" },
+{ id: 24, date: "2026-08-05", tenantName: "عايض معيض عوض العوفي", apartment: "ع35 / 4", amount: 3330, type: "منصة إيجار", description: "عايض معيض عوض العوفي | 10658370334 | رقم الفاتورة: 2508291414738 | في: 2026-08-05 | مبلغ 3330 SAR", monthlyRent: 1667, overdueAfter: 376, tillDate: "2026-09-01" },
+{ id: 25, date: "2026-08-05", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: 125, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 125 | لـ1812 | من7873;مهند الحجوري | 26/8/3 21:46", monthlyRent: 1050, overdueAfter: -125, tillDate: "2026-09-01" },
+{ id: 26, date: "2026-08-05", tenantName: "محل5 - خلود عوض عويض الرشيدي (عرفان الحلاق)", apartment: "تجاري / 43_محل5", amount: 1150, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1150 | لـ1812 | من8265;محمد اقبال | 26/8/3 22:55", monthlyRent: 1150, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 27, date: "2026-08-05", tenantName: "ربيع عبدالواحد محمد عبدالواحد", apartment: "سلطانة / 402", amount: 700, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 700 | لـ1004 | من5030;ربيع عبدالواحد | 26/8/3 23:03", monthlyRent: 750, overdueAfter: 50, tillDate: "2026-09-05" },
+{ id: 28, date: "2026-08-05", tenantName: "زار محمد شير محمد", apartment: "سلطانة / 304", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من3498;زار محمد محمد | 26/8/4 11:44", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-09-07" },
+{ id: 29, date: "2026-08-05", tenantName: "أحمد عبدالرحمن أحمد", apartment: "ع93 / 3", amount: 2000, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 2000 | لـ8882 | من5709;ما رية شيت علي | 26/8/5 00:28", monthlyRent: 750, overdueAfter: 1500, tillDate: "2026-09-08" },
+{ id: 30, date: "2026-08-05", tenantName: "أحمد علي السيد الدبيكي", apartment: "سلطانة / 407", amount: 600, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 600 | لـ1004 | من2095;احمد الدبيكى | 26/8/5 21:46", monthlyRent: 600, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 31, date: "2026-08-05", tenantName: "إبراهيم محمد علي محمود", apartment: "سلطانة / 110", amount: 1000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1000 | لـ1004 | من8181;احمد عبدالغفار | 26/8/5 01:14", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-09-01" },
+{ id: 32, date: "2026-08-05", tenantName: "إبراهيم محمد علي محمود", apartment: "سلطانة / 110", amount: 300, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 300 | لـ1004 | من8181;احمد عبدالغفار | 26/8/5 23:29", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 33, date: "2026-08-04", tenantName: "باسم عبدالاله عبدالحميد السيد", apartment: "ع35 / 3", amount: 1667, type: "منصة إيجار", description: "باسم عبدالاله عبدالحميد السيد | 10720552325 | رقم الفاتورة: 2508290779901 | في: 2026-08-04 | مبلغ 1667 SAR", monthlyRent: 1667, overdueAfter: 125, tillDate: "2026-09-06" },
 { id: 34, date: "2026-08-04", tenantName: "سعيد حسين عبدالله الرشيدي", apartment: "ع40 / 3", amount: 1800, type: "منصة إيجار", description: "عبد العزيز سليم عواد الرشيدي | 10255597761 | رقم الفاتورة: 2604160803310 | في: 2026-08-04 | مبلغ 1800 SAR", monthlyRent: 1833, overdueAfter: 7600, tillDate: "2026-10-01" },
 { id: 35, date: "2026-08-04", tenantName: "محمد عبدالسلام عبدالحميد", apartment: "ع88 / 5", amount: 958, type: "منصة إيجار", description: "محمد عبدالسلام عبد الحميد عبدالحميد | 10921957549 | رقم الفاتورة: 2608034071524 | في: 2026-08-04 | مبلغ 958 SAR", monthlyRent: 2083, overdueAfter: 1125, tillDate: "2026-09-01" },
@@ -1496,7 +1498,7 @@
 { id: 151, date: "2026-07-09", tenantName: "محمد صلاح البشير بادي", apartment: "ع84 / 6", amount: 2000, type: "منصة إيجار", description: "محمد صلاح البشير بادي | 10336870978 | رقم الفاتورة: 2509258109887 | في: 2026-07-09 | مبلغ 2000 SAR", monthlyRent: 1833, overdueAfter: 0, tillDate: "2026-10-01" },
 { id: 152, date: "2026-07-09", tenantName: "باسل عبدالحليم عبدالرحيم امين محمد نعيم", apartment: "ع43 / 311", amount: 750, type: "منصة إيجار", description: "باسل عبدالحليم عبدالرحيم محمدنعيم | 10595282180 | رقم الفاتورة: 2512079086036 | في: 2026-07-09 | مبلغ 750 SAR", monthlyRent: 750, overdueAfter: 125, tillDate: "2026-09-05" },
 { id: 153, date: "2026-07-08", tenantName: "أحمد علي السيد الدبيكي", apartment: "سلطانة / 407", amount: 600, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 600 | لـ1004 | من8815;احمد الدبيكى | 26/7/7 00:18", monthlyRent: 600, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 154, date: "2026-07-08", tenantName: "إسلام أحمد أخضر", apartment: "سلطانة / 403", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من8181;احمد عبدالغفار | 26/7/7 00:50", monthlyRent: 650, overdueAfter: -650, tillDate: "2026-08-15" },
+{ id: 154, date: "2026-07-08", tenantName: "إسلام أحمد أخضر", apartment: "سلطانة / 403", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من8181;احمد عبدالغفار | 26/7/7 00:50", monthlyRent: 650, overdueAfter: 650, tillDate: "2026-08-15" },
 { id: 155, date: "2026-07-08", tenantName: "شكري فيصل محمد", apartment: "ع30 / 2", amount: 2500, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 2500 | لـ0364 | من9354;مؤسسة عالم بلس للبطاريات | 26/7/7 01:49", monthlyRent: 1250, overdueAfter: 0, tillDate: "2026-08-15" },
 { id: 156, date: "2026-07-08", tenantName: "سالم عايض عويض السحيمي الحربي", apartment: "ع43 / 211", amount: 700, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 700 | لـ1812 | من3111;اثير الحربي | 26/7/7 20:34", monthlyRent: 700, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 157, date: "2026-07-08", tenantName: "مصطفى البادي", apartment: "ع43 / 402 سابقا", amount: 1000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1000 | لـ1812 | من4447;مصطفى البادى | 26/7/8 15:07", monthlyRent: 1000, overdueAfter: 0, tillDate: "2026-08-01" },
@@ -1698,7 +1700,7 @@
 { id: 353, date: "2026-06-05", tenantName: "رحاب علي أحمد الزيادي", apartment: "ع43 / 403", amount: 1000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1000 | لـ1812 | من4447;مصطفى البادى | 26/6/5 22:54 [محولة من حساب الجار].", monthlyRent: 1000, overdueAfter: 1000, tillDate: "2026-08-05" },
 { id: 354, date: "2026-06-04", tenantName: "عمر حمد حماد الحماد", apartment: "ع43 / 112", amount: 900, type: "منصة إيجار", description: "عمر حمد حماد الحماد | 10057822813 | رقم الفاتورة: 2604248821704 | في: 2026-06-04 | مبلغ 900 SAR", monthlyRent: 900, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 355, date: "2026-06-04", tenantName: "اسلام خالد سرور إبراهيم سرور", apartment: "ع43 / 205", amount: 900, type: "منصة إيجار", description: "اسلام خالد سرور ابراهيم سرور | 10302114922 | رقم الفاتورة: 2508017425767 | في: 2026-06-04 | مبلغ 900 SAR", monthlyRent: 900, overdueAfter: 0, tillDate: "2026-09-01" },
-{ id: 356, date: "2026-06-04", tenantName: "إبراهيم محمد علي محمود", apartment: "سلطانة / 110", amount: 1300, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1300 | لـ1004 | من5547;مصطفى عوض  | 26/6/4 00:21", monthlyRent: 650, overdueAfter: 1300, tillDate: "2026-09-01" },
+{ id: 356, date: "2026-06-04", tenantName: "إبراهيم محمد علي محمود", apartment: "سلطانة / 110", amount: 1300, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1300 | لـ1004 | من5547;مصطفى عوض  | 26/6/4 00:21", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 357, date: "2026-06-04", tenantName: "سلمان احسان رحمن", apartment: "ع80 / 4", amount: 1666, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1666 | لـ0308 | من6592;عمر احسان عبدالواسع | 26/6/4 01:14", monthlyRent: 1667, overdueAfter: 12, tillDate: "2026-09-01" },
 { id: 358, date: "2026-06-04", tenantName: "محمد سعيد محمد الشور", apartment: "سلطانة / 211", amount: 500, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 500 | لـ1004 | من5807;محمد الشور | 26/6/4 16:05", monthlyRent: 500, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 359, date: "2026-06-04", tenantName: "عبدالوهاب عبدالله محمد الاحمدي", apartment: "ع51 / 9", amount: 2083, type: "منصة إيجار", description: "عبدالوهاب عبدالله محمد سعيد الاحمدي | 10650953768 | رقم الفاتورة: 2509163465866 | في: 2026-06-04 | مبلغ 2083 SAR", monthlyRent: 2000, overdueAfter: -2080, tillDate: "2026-09-01" },
@@ -1756,7 +1758,7 @@
 { id: 411, date: "2026-05-30", tenantName: "محسن ناصر الدويلة المنهالي", apartment: "ع30 / 9", amount: 11000, type: "منصة إيجار", description: "محسن ناصر بن محمد المنهالي | 10067569642 | رقم الفاتورة: 2510140617781 | في: 2026-05-30 | مبلغ 11000 SAR", monthlyRent: 1833, overdueAfter: 0, tillDate: "2026-11-01" },
 { id: 412, date: "2026-05-30", tenantName: "موفق سليم توفيق سماره", apartment: "ع43 / 301", amount: 1100, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 1100 | لـ1812 | من0110;موفق سليم توفيق سماره | 26/5/30 12:13", monthlyRent: 1100, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 413, date: "2026-05-30", tenantName: "حازم محمد عبدالحميد دياب", apartment: "سلطانة / 410", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة | مبلغ:SAR 650 | إلى:1004 | ؜30/5/26 15:03", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-06-25" },
-{ id: 414, date: "2026-05-30", tenantName: "إسلام أحمد أخضر", apartment: "سلطانة / 403", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من7816;اسلام خضر | 26/5/30 17:00", monthlyRent: 650, overdueAfter: -650, tillDate: "2026-08-15" },
+{ id: 414, date: "2026-05-30", tenantName: "إسلام أحمد أخضر", apartment: "سلطانة / 403", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من7816;اسلام خضر | 26/5/30 17:00", monthlyRent: 650, overdueAfter: 650, tillDate: "2026-08-15" },
 { id: 415, date: "2026-05-30", tenantName: "فايز احمد خان", apartment: "سلطانة / 303", amount: 700, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 700 | لـ1004 | من3800;FAYAZ AHMAD KHAN | 26/5/30 21:41", monthlyRent: 700, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 416, date: "2026-05-29", tenantName: "محسن حسني السيد منسي", apartment: "سلطانة / 105", amount: 500, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 500 | لـ1004 | من8104;محسن منسي | 26/5/27 07:29", monthlyRent: 500, overdueAfter: 0, tillDate: "2026-09-01" },
 { id: 417, date: "2026-05-29", tenantName: "محمد وقفي احمد الطوانسي", apartment: "ع43 / 102", amount: 1200, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1200 | لـ1812 | من4142;محمد الطوانسى | 26/5/28 03:12", monthlyRent: 1200, overdueAfter: 0, tillDate: "2026-09-01" },
@@ -2092,39 +2094,39 @@
 
 
 
-{ id: 82, apartment: "سلطانة / 110", tenantName: "إبراهيم محمد علي محمود", paymentSystem: "شهري", overdueAmount: 1300, tillDate: "2026-09-01", monthlyRent: 650 },
-
-
-{ id: 83, apartment: "سلطانة / 201", tenantName: "خالد المجتبى يب الشنقيطي", paymentSystem: "شهري", overdueAmount: 1400, tillDate: "2026-09-01", monthlyRent: 700 },
-{ id: 84, apartment: "سلطانة / 202", tenantName: "محمد محمود أحمد غازي", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-09-01", monthlyRent: 750 },
-{ id: 85, apartment: "سلطانة / 203", tenantName: "محمود حسن عبداللطيف الشال ", paymentSystem: "شهري", overdueAmount: 200, tillDate: "2026-09-01", monthlyRent: 650 },
 
 
 
-
-
-{ id: 86, apartment: "سلطانة / 209", tenantName: "احمد محمد عبدالعزيز أحمد", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-09-01", monthlyRent: 550 },
+{ id: 82, apartment: "سلطانة / 201", tenantName: "خالد المجتبى يب الشنقيطي", paymentSystem: "شهري", overdueAmount: 1400, tillDate: "2026-09-01", monthlyRent: 700 },
+{ id: 83, apartment: "سلطانة / 202", tenantName: "محمد محمود أحمد غازي", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-09-01", monthlyRent: 750 },
+{ id: 84, apartment: "سلطانة / 203", tenantName: "محمود حسن عبداللطيف الشال ", paymentSystem: "شهري", overdueAmount: 200, tillDate: "2026-09-01", monthlyRent: 650 },
 
 
 
 
-{ id: 87, apartment: "سلطانة / 302", tenantName: "عبدالحميد إبراهيم حسن الكردي", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-09-01", monthlyRent: 750 },
 
-
-{ id: 88, apartment: "سلطانة / 305", tenantName: "إبراهيم فاروق فرج", paymentSystem: "شهري", overdueAmount: 3850, tillDate: "2026-09-01", monthlyRent: 550 },
-{ id: 89, apartment: "سلطانة / 306", tenantName: "نويل باكاس جو", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-09-01", monthlyRent: 550 },
+{ id: 85, apartment: "سلطانة / 209", tenantName: "احمد محمد عبدالعزيز أحمد", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-09-01", monthlyRent: 550 },
 
 
 
 
-{ id: 90, apartment: "سلطانة / 310 سابقا", tenantName: "محمد علي علي جادالله", paymentSystem: "شهري", overdueAmount: 150, tillDate: "2026-07-01", monthlyRent: 650 },
-{ id: 91, apartment: "سلطانة / 310", tenantName: "محمد حنيف حسين بودلي", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-09-10", monthlyRent: 650 },
-{ id: 92, apartment: "سلطانة / 311", tenantName: "محروس احمد محروس عيسى", paymentSystem: "شهري", overdueAmount: 600, tillDate: "2026-09-01", monthlyRent: 600 },
+{ id: 86, apartment: "سلطانة / 302", tenantName: "عبدالحميد إبراهيم حسن الكردي", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-09-01", monthlyRent: 750 },
+
+
+{ id: 87, apartment: "سلطانة / 305", tenantName: "إبراهيم فاروق فرج", paymentSystem: "شهري", overdueAmount: 3850, tillDate: "2026-09-01", monthlyRent: 550 },
+{ id: 88, apartment: "سلطانة / 306", tenantName: "نويل باكاس جو", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-09-01", monthlyRent: 550 },
 
 
 
-{ id: 93, apartment: "سلطانة / 402", tenantName: "ربيع عبدالواحد محمد عبدالواحد", paymentSystem: "شهري", overdueAmount: 50, tillDate: "2026-09-05", monthlyRent: 750 },
 
+{ id: 89, apartment: "سلطانة / 310 سابقا", tenantName: "محمد علي علي جادالله", paymentSystem: "شهري", overdueAmount: 150, tillDate: "2026-07-01", monthlyRent: 650 },
+{ id: 90, apartment: "سلطانة / 310", tenantName: "محمد حنيف حسين بودلي", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-09-10", monthlyRent: 650 },
+{ id: 91, apartment: "سلطانة / 311", tenantName: "محروس احمد محروس عيسى", paymentSystem: "شهري", overdueAmount: 600, tillDate: "2026-09-01", monthlyRent: 600 },
+
+
+
+{ id: 92, apartment: "سلطانة / 402", tenantName: "ربيع عبدالواحد محمد عبدالواحد", paymentSystem: "شهري", overdueAmount: 50, tillDate: "2026-09-05", monthlyRent: 750 },
+{ id: 93, apartment: "سلطانة / 403", tenantName: "إسلام أحمد أخضر", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-08-15", monthlyRent: 650 },
 
 { id: 94, apartment: "سلطانة / 405 | 411", tenantName: "احمد عبدالله عارف (غ405 و411)", paymentSystem: "شهري", overdueAmount: 1101, tillDate: "2026-09-01", monthlyRent: 1100 },
 
@@ -2399,7 +2401,7 @@
 [ "ع.سلطانة", "سلطانة / 107", "سليمان سالم هنيدي العوفي", 650, "paid", "2026-09-01", 0, "2025-11-01", 10, 6500, 6500 ],
 [ "ع.سلطانة", "سلطانة / 108", "محمد محمود أحمد نعمه الله", 750, "paid", "2026-09-01", 0, "2025-10-01", 11, 8250, 8250 ],
 [ "ع.سلطانة", "سلطانة / 109", "هاني الامام ذكي شلبي", 600, "paid", "2026-08-16", -600, "2026-01-16", 7, 4200, 4800 ],
-[ "ع.سلطانة", "سلطانة / 110", "إبراهيم محمد علي محمود", 650, "late", "2026-09-01", 1300, "2025-09-01", 12, 7950, 6650 ],
+[ "ع.سلطانة", "سلطانة / 110", "إبراهيم محمد علي محمود", 650, "paid", "2026-09-01", 0, "2025-09-01", 12, 7950, 7950 ],
 [ "ع.سلطانة", "سلطانة / 111", "مختار حسين عبدالستار", 550, "paid", "2026-09-01", 0, "2025-11-01", 10, 5500, 5500 ],
 [ "ع.سلطانة", "سلطانة / 112", "محمد منصور صيام ", 450, "paid", "2026-09-01", 0, "2026-01-01", 8, 3600, 3600 ],
 [ "ع.سلطانة", "سلطانة / 201", "خالد المجتبى يب الشنقيطي", 700, "late", "2026-09-01", 1400, "2026-01-01", 8, 5750, 4350 ],
@@ -2431,7 +2433,7 @@
 [ "ع.سلطانة", "سلطانة / 401", "محمد عدنان - محمد واثق جماشيد علي", 700, "paid", "2026-09-01", 0, "2025-11-01", 10, 7300, 7300 ],
 [ "ع.سلطانة", "سلطانة / 402 / سابقا", "كرم هشام عبدالله عيد", 0, "paid", "2026-02-01", 0, "2026-01-01", 1, 750, 750 ],
 [ "ع.سلطانة", "سلطانة / 402", "ربيع عبدالواحد محمد عبدالواحد", 750, "late", "2026-09-05", 50, "2026-04-05", 5, 3950, 3900 ],
-[ "ع.سلطانة", "سلطانة / 403", "إسلام أحمد أخضر", 650, "paid", "2026-08-15", -650, "2026-01-15", 7, 4700, 5350 ],
+[ "ع.سلطانة", "سلطانة / 403", "إسلام أحمد أخضر", 650, "late", "2026-08-15", 650, "2026-01-15", 7, 4700, 4050 ],
 [ "ع.سلطانة", "سلطانة / 404", "رعد مهدي الكثيري", 650, "paid", "2026-09-01", 0, "2026-01-01", 8, 5200, 5200 ],
 [ "ع.سلطانة", "سلطانة / 405 | 411", "احمد عبدالله عارف (غ405 و411)", 1100, "late", "2026-09-01", 1101, "2025-07-01", 14, 15400, 14299 ],
 [ "ع.سلطانة", "سلطانة / 406", "احمد ربيع أبو مصطفى الرديني", 550, "paid", "2026-09-01", 0, "2026-01-01", 8, 4400, 4400 ],
@@ -2461,47 +2463,6 @@ const overviewData = { buildingsCount:18, overdueCount:98, amountToBePaid:576752
         let currentModal = null;
         const whatsappMessages = [
 
-
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 700 <br> لـ1004 <br> من6170;اكمادسودين سولماري <br> 26/7/29 15:55", info:"🕘 7/29/26 - 10:30 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 700 SAR <br> 🤵 أكمادسودين نسالي سولماري <br> 🏠 سلطانة / 301", info:"🕘 2026-07-29 | 💳 700 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 3600 <br> لـ1812 <br> من7922;احمد الدغيدى <br> 26/7/29 16:38", info:"🕘 7/29/26 - 10:30 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 3,600 SAR <br> 🤵 احمد إبراهيم الدغيدي ع43غ411 <br> 🏠 ع43 / 411", info:"🕘 2026-07-29 | 💳 3,600 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة محلية واردة بـSR 1100 <br> لـ1812 <br> من0110;موفق سليم توفيق سماره <br> 26/7/29 19:13", info:"🕘 7/29/26 - 10:30 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 1,100 SAR <br> 🤵 موفق سليم توفيق سماره <br> 🏠 ع43 / 301", info:"🕘 2026-07-29 | 💳 1,100 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 1667 <br> لـ0349 <br> من5348;ابوخضير حاتم*عبدالحميد*عبدالرحمن <br> 26/7/30 00:31", info:"🕘 7/30/26 - 7:04 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 1,667 SAR <br> 🤵 حاتم عبدالحميد عبدالرحمن أبو خضير <br> 🏠 ع51 / 4", info:"🕘 2026-07-30 | 💳 1,667 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية <br> مبلغ:SR 1500 <br> الى:0998 <br> من:منصة ايجار <br> 26/7/30 03:58", info:"🕘 7/30/26 - 7:04 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"معرفة ضمن<br>منصة إيجار✨", info:"🕘 2026-07-30 | 💳 1,500 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية <br> مبلغ:SR 1667 <br> الى:0332 <br> من:منصة ايجار <br> 26/7/30 03:59", info:"🕘 7/30/26 - 7:04 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"معرفة ضمن<br>منصة إيجار✨", info:"🕘 2026-07-30 | 💳 1,667 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 550 <br> لـ1004 <br> من3925;احمد الردينى <br> 26/7/30 04:26", info:"🕘 7/30/26 - 7:05 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 550 SAR <br> 🤵 احمد ربيع أبو مصطفى الرديني <br> 🏠 سلطانة / 406", info:"🕘 2026-07-30 | 💳 550 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية <br> مبلغ:SR 850 <br> الى:1812 <br> من:منصة ايجار <br> 26/7/30 07:08", info:"🕘 7/30/26 - 7:05 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"معرفة ضمن<br>منصة إيجار✨", info:"🕘 2026-07-30 | 💳 850 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية <br> مبلغ:SR 850 <br> الى:1812 <br> من:منصة ايجار <br> 26/7/30 07:08", info:"🕘 7/30/26 - 7:05 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"معرفة ضمن<br>منصة إيجار✨", info:"🕘 2026-07-30 | 💳 850 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 1917 <br> لـ0308 <br> من9956;حصه ماطر العوفي <br> 26/7/30 14:57", info:"🕘 7/30/26 - 7:06 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 1,917 SAR <br> 👩 حصه ماطر عليان العوفي <br> 🏠 ع80 / 8", info:"🕘 2026-07-30 | 💳 1,917 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 1000 <br> لـ1812 <br> من3602;سلمان العازمي <br> 26/7/30 15:44", info:"🕘 7/30/26 - 7:06 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 1,000 SAR <br> 🤵 سلمان سليم سالم العازمي <br> 🏠 ع43 / 109", info:"🕘 2026-07-30 | 💳 1,000 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 600 <br> لـ1812 <br> من3155;محمود الدسوقى <br> 26/7/30 20:47", info:"🕘 7/30/26 - 7:49 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 600 SAR <br> 🤵 احمد حامد زين العابدين  <br> 🏠 ع43 / 207", info:"🕘 2026-07-30 | 💳 600 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 1500 <br> لـ1002 <br> من5478;مريم المغذوي <br> 26/7/30 22:06", info:"🕘 7/31/26 - 4:35 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 1,500 SAR <br> 🤵 خالد مرزوق هويمل المغذوي الحربي <br> 🏠 ع40 / 7", info:"🕘 2026-07-31 | 💳 1,500 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 2000 <br> لـ0308 <br> من2588;خالد الأنصاري <br> 26/7/31 00:23", info:"🕘 7/31/26 - 4:36 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 2,000 SAR <br> 🤵 خالد أحمد حسن أنصاري  <br> 🏠 ع80 / 9 <br> 🏠 10", info:"🕘 2026-07-31 | 💳 2,000 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة محلية واردة بـSR 700 <br> لـ1812 <br> من9001;حسناء سيد محمد زكى <br> 26/7/31 13:46", info:"🕘 7/31/26 - 4:36 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 700 SAR <br> 🤵 حسناء سيد محمد زكي <br> 🏠 ع43 / 107", info:"🕘 2026-07-31 | 💳 700 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 12000 <br> لـ0308 <br> من9383;ماجد العتيبي <br> 26/7/31 17:12", info:"🕘 7/31/26 - 4:36 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 12,000 SAR <br> 🤵 ماجد مساعد سفر العماري العتيبي <br> 🏠 ع88 / 7", info:"🕘 2026-07-31 | 💳 12,000 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 450 <br> لـ1004 <br> من6518;محمد منصور <br> 26/7/31 18:19", info:"🕘 7/31/26 - 5:56 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 450 SAR <br> 🤵 محمد منصور صيام  <br> 🏠 سلطانة / 112", info:"🕘 2026-07-31 | 💳 450 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 750 <br> لـ1004 <br> من3524;مؤسسة ذرة أكسجين التجارية <br> 26/7/31 18:33", info:"🕘 7/31/26 - 5:56 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 750 SAR <br> 🤵 محمد عوض العمري الحربي <br> 🏠 سلطانة / 208", info:"🕘 2026-07-31 | 💳 750 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 500 <br> لـ1004 <br> من5807;محمد الشور <br> 26/7/31 18:53", info:"🕘 7/31/26 - 5:56 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 500 SAR <br> 🤵 محمد سعيد محمد الشور <br> 🏠 سلطانة / 211", info:"🕘 2026-07-31 | 💳 500 SAR" },
-{ type:"left", sender: "م. حسين الربيعان", text:"حوالة محلية واردة بـSR 900 <br> لـ1812 <br> من0103;مصطفي سعد احمد اللقاني <br> 26/7/31 19:32", info:"🕘 8/1/26 - 7:14 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 900 SAR <br> 🤵 مصطفى سعد أحمد اللقاني <br> 🏠 ع43 / 202", info:"🕘 2026-08-01 | 💳 900 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة محلية واردة بـSR 1500 <br> لـ8882 <br> من9302;حمزه مالم ادريس <br> 26/7/31 23:40", info:"🕘 8/1/26 - 7:14 pm " },
 { type:"right", sender: "نظام متابعة الإيجارات", text:"💳 1,500 SAR <br> 🤵 حمزة مالم إدريس <br> 🏠 ع93 / 1 <br> 🏠 2", info:"🕘 2026-08-01 | 💳 1,500 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 1000 <br> لـ8822 <br> من4216;محي الدين مرغني الطيب الجميعابي <br> 26/8/1 06:18", info:"🕘 8/1/26 - 7:14 pm " },
@@ -2607,7 +2568,7 @@ const overviewData = { buildingsCount:18, overdueCount:98, amountToBePaid:576752
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة محلية واردة بـSR 2000 <br> لـ8882 <br> من5709;ما رية شيت علي <br> 26/8/5 00:28", info:"🕘 8/5/26 - 9:08 pm " },
 { type:"right", sender: "نظام متابعة الإيجارات", text:"💳 2,000 SAR <br> 🤵 أحمد عبدالرحمن أحمد <br> 🏠 ع93 / 3", info:"🕘 2026-08-05 | 💳 2,000 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 1000 <br> لـ1004 <br> من8181;احمد عبدالغفار <br> 26/8/5 01:14", info:"🕘 8/5/26 - 9:08 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 1,000 SAR <br> 🤵 إسلام أحمد أخضر <br> 🏠 سلطانة / 403", info:"🕘 2026-08-05 | 💳 1,000 SAR" },
+{ type:"right", sender: "نظام متابعة الإيجارات", text:"إبراهيم محمد علي محمود | 1000 رس | سلطانة 110✨", info:"🕘 2026-08-05 | 💳 1,000 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية <br> مبلغ:SR 900 <br> الى:1812 <br> من:منصة ايجار <br> 26/8/5 02:58", info:"🕘 8/5/26 - 9:08 pm " },
 { type:"right", sender: "نظام متابعة الإيجارات", text:"معرفة ضمن<br>منصة إيجار✨", info:"🕘 2026-08-05 | 💳 900 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية <br> مبلغ:SR 1000 <br> الى:8822 <br> من:منصة ايجار <br> 26/8/5 16:23", info:"🕘 8/5/26 - 9:08 pm " },
@@ -2621,7 +2582,7 @@ const overviewData = { buildingsCount:18, overdueCount:98, amountToBePaid:576752
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 600 <br> لـ1004 <br> من2095;احمد الدبيكى <br> 26/8/5 21:46", info:"🕘 8/5/26 - 9:09 pm " },
 { type:"right", sender: "نظام متابعة الإيجارات", text:"💳 600 SAR <br> 🤵 أحمد علي السيد الدبيكي <br> 🏠 سلطانة / 407", info:"🕘 2026-08-05 | 💳 600 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 300 <br> لـ1004 <br> من8181;احمد عبدالغفار <br> 26/8/5 23:29", info:"🕘 8/6/26 - 11:12 pm " },
-{ type:"right", sender: "نظام متابعة الإيجارات", text:"💳 300 SAR <br> 🤵 إسلام أحمد أخضر <br> 🏠 سلطانة / 403", info:"🕘 2026-08-06 | 💳 300 SAR" },
+{ type:"right", sender: "نظام متابعة الإيجارات", text:"إبراهيم محمد علي محمود | 300 رس | سلطانة 110✨", info:"🕘 2026-08-06 | 💳 300 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة داخلية واردة بـSR 650 <br> لـ1004 <br> من4844;سليمان سالم هنيدي العوفي <br> 26/8/6 23:53", info:"🕘 8/6/26 - 11:12 pm " },
 { type:"right", sender: "نظام متابعة الإيجارات", text:"💳 650 SAR <br> 🤵 سليمان سالم هنيدي العوفي <br> 🏠 سلطانة / 107", info:"🕘 2026-08-06 | 💳 650 SAR" },
 { type:"left", sender: "م. حسين الربيعان", text:"حوالة محلية واردة بـSR 1084 <br> لـ8822 <br> من3103;مكتب المعرفة العامة للخدمات العامة <br> 26/8/6 00:15", info:"🕘 8/6/26 - 11:12 pm " },
