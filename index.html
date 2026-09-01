@@ -1342,7 +1342,6 @@
     </div>
     <script>
         const EXPIRY_DATE = "2026-09-09";
-
  let recentPaymentsTable = [
 { id: 1, date: "2026-09-01", tenantName: "فاطمه عبده محمد سيسي", apartment: "ع35 / 10", amount: 1000, type: "منصة إيجار", description: "FATIMA ABDOU MOHAMED CISSE | 10845345377 | رقم الفاتورة: 2510178837439 | في: 2026-09-01 | مبلغ 1000 SAR", monthlyRent: 2000, overdueAfter: 2125, tillDate: "2026-10-01" },
 { id: 2, date: "2026-09-01", tenantName: "خالد المجتبى يب الشنقيطي", apartment: "سلطانة / 201", amount: 700, type: "منصة إيجار", description: "خالد المجتبي بن يب الشنقيطي | 10506263501 | رقم الفاتورة: 2605067255479 | في: 2026-09-01 | مبلغ 700 SAR", monthlyRent: 700, overdueAfter: 0, tillDate: "2026-10-01" },
@@ -1372,7 +1371,7 @@
 { id: 26, date: "2026-09-01", tenantName: "حسناء سيد محمد زكي", apartment: "ع43 / 107", amount: 700, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 700 | لـ1812 | من9001;حسناء سيد محمد زكى | 26/9/1 14:53", monthlyRent: 700, overdueAfter: 0, tillDate: "2026-10-01" },
 { id: 27, date: "2026-09-01", tenantName: "عطيه مبروك مبارك", apartment: "ع43 / 306", amount: 750, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 750 | لـ1812 | من6628;فيصل العوفي | 26/9/1 15:32", monthlyRent: 750, overdueAfter: -750, tillDate: "2026-09-08" },
 { id: 28, date: "2026-08-30", tenantName: "محمد عبداللطيف الحربي", apartment: "ع43 / 203", amount: 850, type: "منصة إيجار", description: "محمد عبداللطيف شديد الحربي | 10247532009 | رقم الفاتورة: 2601098797427 | في: 2026-08-30 | مبلغ 850 SAR", monthlyRent: 850, overdueAfter: 850, tillDate: "2026-10-01" },
-{ id: 29, date: "2026-08-30", tenantName: "عزت إبراهيم عبدالنعيم عبدالصمد", apartment: "ع51 / 2", amount: 1000, type: "منصة إيجار", description: "عزت ابراهيم عبد النعيم عبد الصمد | 10544013523 | رقم الفاتورة: 2608294192133 | في: 2026-08-30 | مبلغ 1000 SAR", monthlyRent: 1000, overdueAfter: 6000, tillDate: "2027-03-01" },
+{ id: 29, date: "2026-08-30", tenantName: "عزت إبراهيم عبدالنعيم عبدالصمد", apartment: "ع51 / 2", amount: 1000, type: "منصة إيجار", description: "عزت ابراهيم عبد النعيم عبد الصمد | 10544013523 | رقم الفاتورة: 2608294192133 | في: 2026-08-30 | مبلغ 1000 SAR", monthlyRent: 1000, overdueAfter: 1000, tillDate: "2026-10-01" },
 { id: 30, date: "2026-08-30", tenantName: "مصطفى إبراهيم سالم إبراهيم", apartment: "سلطانة / 210", amount: 600, type: "تحويل بنكي", description: "حوالة محلية واردة بـSR 600 | لـ1004 | من6000;MOUSTAFA IBRAHIM SALEM IBRAHIM | 26/8/30 02:17", monthlyRent: 600, overdueAfter: -600, tillDate: "2026-09-13" },
 { id: 31, date: "2026-08-30", tenantName: "مؤيد ماجد عيدروس عبدالكريم", apartment: "ع68 / بدروم", amount: 4500, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 4500 | لـ0998 | من3693;بسام جابر | 26/8/30 09:05", monthlyRent: 750, overdueAfter: 0, tillDate: "2027-02-01" },
 { id: 32, date: "2026-08-30", tenantName: "محمد وقفي احمد الطوانسي", apartment: "ع43 / 102", amount: 1200, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1200 | لـ1812 | من4142;محمد الطوانسى | 26/8/30 11:18", monthlyRent: 1200, overdueAfter: 0, tillDate: "2026-10-01" },
@@ -1456,7 +1455,7 @@
 { id: 110, date: "2026-08-06", tenantName: "اسلام خالد سرور إبراهيم سرور", apartment: "ع43 / 205", amount: 900, type: "منصة إيجار", description: "اسلام خالد سرور ابراهيم سرور | 10302114922 | رقم الفاتورة: 2508017425767 | في: 2026-08-06 | مبلغ 900 SAR", monthlyRent: 900, overdueAfter: 900, tillDate: "2026-10-01" },
 { id: 111, date: "2026-08-06", tenantName: "عبدالبديع محمد علي برناوي", apartment: "ع35 / 1", amount: 1350, type: "منصة إيجار", description: "عبد البديع بن محمد بن علي برناوي | 10463418496 | رقم الفاتورة: 2602052377386 | في: 2026-08-06 | مبلغ 1350 SAR", monthlyRent: 1167, overdueAfter: 2147, tillDate: "2026-09-20" },
 { id: 112, date: "2026-08-06", tenantName: "محمد محمود أحمد غازي", apartment: "سلطانة / 202", amount: 750, type: "منصة إيجار", description: "محمد محمود احمد غازي | 10126337349 | رقم الفاتورة: 2512031784536 | في: 2026-08-06 | مبلغ 750 SAR", monthlyRent: 750, overdueAfter: 1500, tillDate: "2026-10-01" },
-{ id: 113, date: "2026-08-05", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: 125, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 125 | لـ1812 | من7873;مهند الحجوري | 26/8/3 21:46", monthlyRent: 1050, overdueAfter: 12475, tillDate: "2027-09-01" },
+{ id: 113, date: "2026-08-05", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: 125, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 125 | لـ1812 | من7873;مهند الحجوري | 26/8/3 21:46", monthlyRent: 1050, overdueAfter: 925, tillDate: "2026-10-01" },
 { id: 114, date: "2026-08-05", tenantName: "محل5 - خلود عوض عويض الرشيدي (عرفان الحلاق)", apartment: "تجاري / 43_محل5", amount: 1150, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1150 | لـ1812 | من8265;محمد اقبال | 26/8/3 22:55", monthlyRent: 1150, overdueAfter: 1150, tillDate: "2026-10-01" },
 { id: 115, date: "2026-08-05", tenantName: "ربيع عبدالواحد محمد عبدالواحد", apartment: "سلطانة / 402", amount: 700, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 700 | لـ1004 | من5030;ربيع عبدالواحد | 26/8/3 23:03", monthlyRent: 750, overdueAfter: 50, tillDate: "2026-09-05" },
 { id: 116, date: "2026-08-05", tenantName: "زار محمد شير محمد", apartment: "سلطانة / 304", amount: 650, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 650 | لـ1004 | من3498;زار محمد محمد | 26/8/4 11:44", monthlyRent: 650, overdueAfter: 0, tillDate: "2026-09-07" },
@@ -1600,11 +1599,11 @@
 { id: 254, date: "2026-07-08", tenantName: "شكري فيصل محمد", apartment: "ع30 / 2", amount: 2500, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 2500 | لـ0364 | من9354;مؤسسة عالم بلس للبطاريات | 26/7/7 01:49", monthlyRent: 1250, overdueAfter: 1250, tillDate: "2026-09-15" },
 { id: 255, date: "2026-07-08", tenantName: "سالم عايض عويض السحيمي الحربي", apartment: "ع43 / 211", amount: 700, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 700 | لـ1812 | من3111;اثير الحربي | 26/7/7 20:34", monthlyRent: 700, overdueAfter: 700, tillDate: "2026-10-01" },
 { id: 256, date: "2026-07-08", tenantName: "مصطفى البادي", apartment: "ع43 / 402 سابقا", amount: 1000, type: "تحويل بنكي", description: "حوالة داخلية واردة بـSR 1000 | لـ1812 | من4447;مصطفى البادى | 26/7/8 15:07", monthlyRent: 1000, overdueAfter: 0, tillDate: "2026-08-01" },
-{ id: 257, date: "2026-07-08", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: -9450, type: "حالة نقدية", description: "تم التحويل لغرض إثبات شيك المقاصة سابقا.", monthlyRent: 1050, overdueAfter: 12475, tillDate: "2027-09-01" },
+{ id: 257, date: "2026-07-08", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: -9450, type: "حالة نقدية", description: "تم التحويل لغرض إثبات شيك المقاصة سابقا.", monthlyRent: 1050, overdueAfter: 925, tillDate: "2026-10-01" },
 { id: 258, date: "2026-07-08", tenantName: "ولاء محمد محمود عبدالعزيز", apartment: "ع30 / 12", amount: 1000, type: "منصة إيجار", description: "ولاء محمد محمود عبد العزيز | 10861927441 | رقم الفاتورة: 2503137485025 | في: 2026-07-08 | مبلغ 1000 SAR", monthlyRent: 1500, overdueAfter: 5999, tillDate: "2026-10-01" },
 { id: 259, date: "2026-07-08", tenantName: "علي الحسن علي المالكي", apartment: "ع93 / 11", amount: 7500, type: "منصة إيجار", description: "علي بن الحسن بن علي المالكي | 10014752185 | رقم الفاتورة: 2607070231660 | في: 2026-07-08 | مبلغ 7500 SAR", monthlyRent: 1083, overdueAfter: -1000, tillDate: "2027-02-01" },
 { id: 260, date: "2026-07-08", tenantName: "سعيد حسين عبدالله الرشيدي", apartment: "ع40 / 3", amount: 1800, type: "منصة إيجار", description: "عبد العزيز سليم عواد الرشيدي | 10255597761 | رقم الفاتورة: 2604160803310 | في: 2026-07-08 | مبلغ 1800 SAR", monthlyRent: 1833, overdueAfter: 7600, tillDate: "2026-10-01" },
-{ id: 261, date: "2026-07-08", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: 9450, type: "منصة إيجار", description: "مهند عبدالله سالم الحجوري | 10690455087 | رقم الفاتورة: 2507030788018 | في: 2026-07-08 | مبلغ 9450 SAR", monthlyRent: 1050, overdueAfter: 12475, tillDate: "2027-09-01" },
+{ id: 261, date: "2026-07-08", tenantName: "مهند عبدالله سالم الحجوري", apartment: "ع43 / 308", amount: 9450, type: "منصة إيجار", description: "مهند عبدالله سالم الحجوري | 10690455087 | رقم الفاتورة: 2507030788018 | في: 2026-07-08 | مبلغ 9450 SAR", monthlyRent: 1050, overdueAfter: 925, tillDate: "2026-10-01" },
 { id: 262, date: "2026-07-08", tenantName: "محمد احمد الأمين مدني", apartment: "ع86 / 5", amount: 11000, type: "منصة إيجار", description: "محمد احمد الامين مدنى | 10531348962 | رقم الفاتورة: 2607077249634 | في: 2026-07-08 | مبلغ 11000 SAR", monthlyRent: 1667, overdueAfter: -1000, tillDate: "2027-01-01" },
 { id: 263, date: "2026-07-08", tenantName: "الصديق علي طلحه الطيب", apartment: "ع86 / 1", amount: 1000, type: "منصة إيجار", description: "الصديق على طلحه الطيب | 10090087272 | رقم الفاتورة: 2509117821903 | في: 2026-07-08 | مبلغ 1000 SAR", monthlyRent: 1000, overdueAfter: 1000, tillDate: "2026-10-01" },
 { id: 264, date: "2026-07-07", tenantName: "عبدالوحيد عبدالرشيد خان", apartment: "ع43 / 208", amount: 3150, type: "تسليم نقدي", description: "تسليم نقدي: عبدالوحيد عبدالرشيد خان _ 3150 رس _ سند رقم 5983 بتاريخ 07 يوليو.", monthlyRent: 1500, overdueAfter: 0, tillDate: "2026-09-07" },
@@ -1934,7 +1933,7 @@
 { id: 43, apartment: "ع43 / 304", tenantName: "عايض فارس بن عايض الرشيدي", paymentSystem: "شهري", overdueAmount: 2500, tillDate: "2026-10-01", monthlyRent: 1000 },
 
 
-{ id: 44, apartment: "ع43 / 308", tenantName: "مهند عبدالله سالم الحجوري", paymentSystem: "سنوي", overdueAmount: 12475, tillDate: "2027-09-01", monthlyRent: 1050 },
+{ id: 44, apartment: "ع43 / 308", tenantName: "مهند عبدالله سالم الحجوري", paymentSystem: "شهري", overdueAmount: 925, tillDate: "2026-10-01", monthlyRent: 1050 },
 
 
 { id: 45, apartment: "ع43 / 310", tenantName: "سهيل عابد حسين أحمد", paymentSystem: "شهري", overdueAmount: 850, tillDate: "2026-09-25", monthlyRent: 850 },
@@ -1962,9 +1961,8 @@
 
 
 { id: 50, apartment: "ع51 / 1", tenantName: "وليد حسين الخليفه المحجوب", paymentSystem: "شهري", overdueAmount: 4825, tillDate: "2026-09-04", monthlyRent: 1167 },
-{ id: 51, apartment: "ع51 / 2 سابقا", tenantName: "خالد حمدان سعيد الراعي", paymentSystem: "نصف سنوي", overdueAmount: 5000, tillDate: "2027-02-01", monthlyRent: 1000 },
-{ id: 52, apartment: "ع51 / 2", tenantName: "عزت إبراهيم عبدالنعيم عبدالصمد", paymentSystem: "نصف سنوي", overdueAmount: 6000, tillDate: "2027-03-01", monthlyRent: 1000 },
 
+{ id: 51, apartment: "ع51 / 2", tenantName: "عزت إبراهيم عبدالنعيم عبدالصمد", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 1000 },
 
 
 
@@ -1972,175 +1970,176 @@
 
 
 
-{ id: 53, apartment: "ع51 / 11", tenantName: "بدر جزاء محمد العلوي", paymentSystem: "شهري", overdueAmount: 2167, tillDate: "2026-10-01", monthlyRent: 2167 },
 
+{ id: 52, apartment: "ع51 / 11", tenantName: "بدر جزاء محمد العلوي", paymentSystem: "شهري", overdueAmount: 2167, tillDate: "2026-10-01", monthlyRent: 2167 },
 
 
 
 
-{ id: 54, apartment: "ع66 / 3", tenantName: "إسماعيل محمود إسماعيل عبدالرحيم ", paymentSystem: "نصف سنوي", overdueAmount: 500, tillDate: "2026-09-08", monthlyRent: 1417 },
 
-{ id: 55, apartment: "ع66 / 5 | 6 | 7", tenantName: "مستشفى المواساة ", paymentSystem: "سنوي", overdueAmount: 48000, tillDate: "2027-09-01", monthlyRent: 4000 },
+{ id: 53, apartment: "ع66 / 3", tenantName: "إسماعيل محمود إسماعيل عبدالرحيم ", paymentSystem: "نصف سنوي", overdueAmount: 500, tillDate: "2026-09-08", monthlyRent: 1417 },
 
-{ id: 56, apartment: "ع66 / 9", tenantName: "سعيد محمود محمد عبداللطيف", paymentSystem: "نصف سنوي", overdueAmount: 6999, tillDate: "2027-03-01", monthlyRent: 1167 },
-{ id: 57, apartment: "ع66 / 10", tenantName: "عبدالله أحمد شاه عبدالغفور", paymentSystem: "نصف سنوي", overdueAmount: 7000, tillDate: "2027-03-01", monthlyRent: 1167 },
+{ id: 54, apartment: "ع66 / 5 | 6 | 7", tenantName: "مستشفى المواساة ", paymentSystem: "سنوي", overdueAmount: 48000, tillDate: "2027-09-01", monthlyRent: 4000 },
 
+{ id: 55, apartment: "ع66 / 9", tenantName: "سعيد محمود محمد عبداللطيف", paymentSystem: "نصف سنوي", overdueAmount: 6999, tillDate: "2027-03-01", monthlyRent: 1167 },
+{ id: 56, apartment: "ع66 / 10", tenantName: "عبدالله أحمد شاه عبدالغفور", paymentSystem: "نصف سنوي", overdueAmount: 7000, tillDate: "2027-03-01", monthlyRent: 1167 },
 
 
-{ id: 58, apartment: "ع68 / 3", tenantName: "فاطمة ثابت حامد الجهني", paymentSystem: "شهري", overdueAmount: 167, tillDate: "2026-10-01", monthlyRent: 1500 },
-{ id: 59, apartment: "ع68 / 4", tenantName: "ماجد عبدالواحد حسين عبدالكريم", paymentSystem: "شهري", overdueAmount: 3000, tillDate: "2026-10-01", monthlyRent: 1500 },
-{ id: 60, apartment: "ع68 / 5", tenantName: "محمد بخيت ابوزمام السيد", paymentSystem: "شهري", overdueAmount: 1750, tillDate: "2026-10-01", monthlyRent: 1500 },
-{ id: 61, apartment: "ع68 / 6", tenantName: "عبدالرؤوف رحيم بخش", paymentSystem: "شهري", overdueAmount: 8625, tillDate: "2026-10-01", monthlyRent: 1500 },
 
-{ id: 62, apartment: "ع68 / 8", tenantName: "شهاب كامل هزاع قائد", paymentSystem: "شهري", overdueAmount: 4608, tillDate: "2026-10-01", monthlyRent: 1667 },
-{ id: 63, apartment: "ع68 / 9", tenantName: "رحمه الله أحمد شاه", paymentSystem: "نصف سنوي", overdueAmount: 6500, tillDate: "2027-03-01", monthlyRent: 1250 },
+{ id: 57, apartment: "ع68 / 3", tenantName: "فاطمة ثابت حامد الجهني", paymentSystem: "شهري", overdueAmount: 167, tillDate: "2026-10-01", monthlyRent: 1500 },
+{ id: 58, apartment: "ع68 / 4", tenantName: "ماجد عبدالواحد حسين عبدالكريم", paymentSystem: "شهري", overdueAmount: 3000, tillDate: "2026-10-01", monthlyRent: 1500 },
+{ id: 59, apartment: "ع68 / 5", tenantName: "محمد بخيت ابوزمام السيد", paymentSystem: "شهري", overdueAmount: 1750, tillDate: "2026-10-01", monthlyRent: 1500 },
+{ id: 60, apartment: "ع68 / 6", tenantName: "عبدالرؤوف رحيم بخش", paymentSystem: "شهري", overdueAmount: 8625, tillDate: "2026-10-01", monthlyRent: 1500 },
 
+{ id: 61, apartment: "ع68 / 8", tenantName: "شهاب كامل هزاع قائد", paymentSystem: "شهري", overdueAmount: 4608, tillDate: "2026-10-01", monthlyRent: 1667 },
+{ id: 62, apartment: "ع68 / 9", tenantName: "رحمه الله أحمد شاه", paymentSystem: "نصف سنوي", overdueAmount: 6500, tillDate: "2027-03-01", monthlyRent: 1250 },
 
-{ id: 64, apartment: "ع80 / 2", tenantName: "مدني عباس محسن أنصاري", paymentSystem: "شهري", overdueAmount: 2800, tillDate: "2026-10-01", monthlyRent: 1083 },
-{ id: 65, apartment: "ع80 / 3", tenantName: "بشير محمد هاشم الهوسه", paymentSystem: "ربع سنوي", overdueAmount: 100, tillDate: "2026-10-01", monthlyRent: 1667 },
-{ id: 66, apartment: "ع80 / 4", tenantName: "سلمان احسان رحمن", paymentSystem: "شهري", overdueAmount: 1679, tillDate: "2026-10-01", monthlyRent: 1667 },
-{ id: 67, apartment: "ع80 / 5", tenantName: "سعود عبدالرحمن ماطر الحربي", paymentSystem: "شهري", overdueAmount: 7200, tillDate: "2026-09-08", monthlyRent: 2000 },
 
-{ id: 68, apartment: "ع80 / 7", tenantName: "نسرين عبدالرحمن سليمان الدويرعات", paymentSystem: "شهري", overdueAmount: 1500, tillDate: "2026-09-16", monthlyRent: 1833 },
-{ id: 69, apartment: "ع80 / 8", tenantName: "حصه ماطر عليان العوفي", paymentSystem: "شهري", overdueAmount: 1817, tillDate: "2026-10-01", monthlyRent: 1917 },
-{ id: 70, apartment: "ع80 / 9 | 10", tenantName: "خالد أحمد حسن أنصاري ", paymentSystem: "شهري", overdueAmount: 8000, tillDate: "2026-10-01", monthlyRent: 4000 },
-{ id: 71, apartment: "ع80 / 11", tenantName: "محمد مازن محمد عدنان الخن", paymentSystem: "ربع سنوي", overdueAmount: 3500, tillDate: "2026-12-01", monthlyRent: 1250 },
+{ id: 63, apartment: "ع80 / 2", tenantName: "مدني عباس محسن أنصاري", paymentSystem: "شهري", overdueAmount: 2800, tillDate: "2026-10-01", monthlyRent: 1083 },
+{ id: 64, apartment: "ع80 / 3", tenantName: "بشير محمد هاشم الهوسه", paymentSystem: "ربع سنوي", overdueAmount: 100, tillDate: "2026-10-01", monthlyRent: 1667 },
+{ id: 65, apartment: "ع80 / 4", tenantName: "سلمان احسان رحمن", paymentSystem: "شهري", overdueAmount: 1679, tillDate: "2026-10-01", monthlyRent: 1667 },
+{ id: 66, apartment: "ع80 / 5", tenantName: "سعود عبدالرحمن ماطر الحربي", paymentSystem: "شهري", overdueAmount: 7200, tillDate: "2026-09-08", monthlyRent: 2000 },
 
-{ id: 72, apartment: "ع82 / 1", tenantName: "عبدالعزيز غلام سخي", paymentSystem: "شهري", overdueAmount: 1080, tillDate: "2026-10-01", monthlyRent: 1083 },
+{ id: 67, apartment: "ع80 / 7", tenantName: "نسرين عبدالرحمن سليمان الدويرعات", paymentSystem: "شهري", overdueAmount: 1500, tillDate: "2026-09-16", monthlyRent: 1833 },
+{ id: 68, apartment: "ع80 / 8", tenantName: "حصه ماطر عليان العوفي", paymentSystem: "شهري", overdueAmount: 1817, tillDate: "2026-10-01", monthlyRent: 1917 },
+{ id: 69, apartment: "ع80 / 9 | 10", tenantName: "خالد أحمد حسن أنصاري ", paymentSystem: "شهري", overdueAmount: 8000, tillDate: "2026-10-01", monthlyRent: 4000 },
+{ id: 70, apartment: "ع80 / 11", tenantName: "محمد مازن محمد عدنان الخن", paymentSystem: "ربع سنوي", overdueAmount: 3500, tillDate: "2026-12-01", monthlyRent: 1250 },
 
-{ id: 73, apartment: "ع82 / 3", tenantName: "رقية محمد أبو بكر عبدالرحمن", paymentSystem: "سنوي", overdueAmount: 18000, tillDate: "2027-09-01", monthlyRent: 1500 },
+{ id: 71, apartment: "ع82 / 1", tenantName: "عبدالعزيز غلام سخي", paymentSystem: "شهري", overdueAmount: 1080, tillDate: "2026-10-01", monthlyRent: 1083 },
 
-{ id: 74, apartment: "ع82 / 5", tenantName: "عبود عبدالله عليثه الحربي", paymentSystem: "شهري", overdueAmount: 125, tillDate: "2026-09-10", monthlyRent: 2000 },
+{ id: 72, apartment: "ع82 / 3", tenantName: "رقية محمد أبو بكر عبدالرحمن", paymentSystem: "سنوي", overdueAmount: 18000, tillDate: "2027-09-01", monthlyRent: 1500 },
 
+{ id: 73, apartment: "ع82 / 5", tenantName: "عبود عبدالله عليثه الحربي", paymentSystem: "شهري", overdueAmount: 125, tillDate: "2026-09-10", monthlyRent: 2000 },
 
 
 
-{ id: 75, apartment: "ع82 / 10", tenantName: "محمد زكري راغب", paymentSystem: "ربع سنوي", overdueAmount: 6000, tillDate: "2026-11-01", monthlyRent: 2000 },
 
-{ id: 76, apartment: "ع84 / 1", tenantName: "محمد إبراهيم شريف حسن", paymentSystem: "شهري", overdueAmount: 1450, tillDate: "2026-10-01", monthlyRent: 1000 },
+{ id: 74, apartment: "ع82 / 10", tenantName: "محمد زكري راغب", paymentSystem: "ربع سنوي", overdueAmount: 6000, tillDate: "2026-11-01", monthlyRent: 2000 },
 
+{ id: 75, apartment: "ع84 / 1", tenantName: "محمد إبراهيم شريف حسن", paymentSystem: "شهري", overdueAmount: 1450, tillDate: "2026-10-01", monthlyRent: 1000 },
 
 
 
 
 
-{ id: 77, apartment: "ع84 / 8", tenantName: "الطاهر احمد الطاهر احمد", paymentSystem: "شهري", overdueAmount: 2000, tillDate: "2026-10-01", monthlyRent: 2000 },
-{ id: 78, apartment: "ع86 / 1", tenantName: "الصديق علي طلحه الطيب", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 1000 },
-{ id: 79, apartment: "ع86 / 2", tenantName: "محي الدين مرغني الطيب الجميعاني", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 1000 },
-{ id: 80, apartment: "ع86 / 3", tenantName: "عبدالعزيز جعفر حمد فضل", paymentSystem: "شهري", overdueAmount: 2671, tillDate: "2026-10-01", monthlyRent: 1333 },
 
+{ id: 76, apartment: "ع84 / 8", tenantName: "الطاهر احمد الطاهر احمد", paymentSystem: "شهري", overdueAmount: 2000, tillDate: "2026-10-01", monthlyRent: 2000 },
+{ id: 77, apartment: "ع86 / 1", tenantName: "الصديق علي طلحه الطيب", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 1000 },
+{ id: 78, apartment: "ع86 / 2", tenantName: "محي الدين مرغني الطيب الجميعاني", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 1000 },
+{ id: 79, apartment: "ع86 / 3", tenantName: "عبدالعزيز جعفر حمد فضل", paymentSystem: "شهري", overdueAmount: 2671, tillDate: "2026-10-01", monthlyRent: 1333 },
 
 
-{ id: 81, apartment: "ع86 / 6", tenantName: "عبدالرحمن الصبحي", paymentSystem: "ربع سنوي", overdueAmount: 6000, tillDate: "2026-11-15", monthlyRent: 2000 },
 
+{ id: 80, apartment: "ع86 / 6", tenantName: "عبدالرحمن الصبحي", paymentSystem: "ربع سنوي", overdueAmount: 6000, tillDate: "2026-11-15", monthlyRent: 2000 },
 
 
 
-{ id: 82, apartment: "ع86 / 11", tenantName: "انس عبدالمجيد حمراء", paymentSystem: "شهري", overdueAmount: 1337, tillDate: "2026-10-01", monthlyRent: 1333 },
-{ id: 83, apartment: "ع86 / 12", tenantName: "محمد عارف يوسف عوض الكريم", paymentSystem: "شهري", overdueAmount: 1338, tillDate: "2026-10-01", monthlyRent: 1333 },
-{ id: 84, apartment: "ع88 / الحارس", tenantName: "عزيز الإسلام طاهر الدين", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 500 },
 
-{ id: 85, apartment: "ع88 / 2", tenantName: "رجب علي محمد", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-09-15", monthlyRent: 750 },
-{ id: 86, apartment: "ع88 / 3", tenantName: "محمد علي احمد شبانة", paymentSystem: "سنوي", overdueAmount: 18000, tillDate: "2027-08-01", monthlyRent: 1500 },
-{ id: 87, apartment: "ع88 / 4", tenantName: "وليد احمد نجاتي محمد حافظ", paymentSystem: "شهري", overdueAmount: 1582, tillDate: "2026-10-01", monthlyRent: 1583 },
-{ id: 88, apartment: "ع88 / 5", tenantName: "محمد عبدالسلام عبدالحميد", paymentSystem: "شهري", overdueAmount: 1126, tillDate: "2026-10-01", monthlyRent: 2083 },
-{ id: 89, apartment: "ع88 / 6", tenantName: "نور بنت عويد معوض الرجبي", paymentSystem: "نصف سنوي", overdueAmount: 12500, tillDate: "2027-03-01", monthlyRent: 2083 },
+{ id: 81, apartment: "ع86 / 11", tenantName: "انس عبدالمجيد حمراء", paymentSystem: "شهري", overdueAmount: 1337, tillDate: "2026-10-01", monthlyRent: 1333 },
+{ id: 82, apartment: "ع86 / 12", tenantName: "محمد عارف يوسف عوض الكريم", paymentSystem: "شهري", overdueAmount: 1338, tillDate: "2026-10-01", monthlyRent: 1333 },
+{ id: 83, apartment: "ع88 / الحارس", tenantName: "عزيز الإسلام طاهر الدين", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 500 },
 
-{ id: 90, apartment: "ع88 / 8", tenantName: "محمد معين نواز", paymentSystem: "شهري", overdueAmount: 1892, tillDate: "2026-10-01", monthlyRent: 2000 },
-{ id: 91, apartment: "ع88 / 9", tenantName: "محمد قمر عالم (ش1+9)", paymentSystem: "شهري", overdueAmount: 3000, tillDate: "2026-10-01", monthlyRent: 1833 },
+{ id: 84, apartment: "ع88 / 2", tenantName: "رجب علي محمد", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-09-15", monthlyRent: 750 },
+{ id: 85, apartment: "ع88 / 3", tenantName: "محمد علي احمد شبانة", paymentSystem: "سنوي", overdueAmount: 18000, tillDate: "2027-08-01", monthlyRent: 1500 },
+{ id: 86, apartment: "ع88 / 4", tenantName: "وليد احمد نجاتي محمد حافظ", paymentSystem: "شهري", overdueAmount: 1582, tillDate: "2026-10-01", monthlyRent: 1583 },
+{ id: 87, apartment: "ع88 / 5", tenantName: "محمد عبدالسلام عبدالحميد", paymentSystem: "شهري", overdueAmount: 1126, tillDate: "2026-10-01", monthlyRent: 2083 },
+{ id: 88, apartment: "ع88 / 6", tenantName: "نور بنت عويد معوض الرجبي", paymentSystem: "نصف سنوي", overdueAmount: 12500, tillDate: "2027-03-01", monthlyRent: 2083 },
 
+{ id: 89, apartment: "ع88 / 8", tenantName: "محمد معين نواز", paymentSystem: "شهري", overdueAmount: 1892, tillDate: "2026-10-01", monthlyRent: 2000 },
+{ id: 90, apartment: "ع88 / 9", tenantName: "محمد قمر عالم (ش1+9)", paymentSystem: "شهري", overdueAmount: 3000, tillDate: "2026-10-01", monthlyRent: 1833 },
 
 
-{ id: 92, apartment: "ع93 / 3", tenantName: "أحمد عبدالرحمن أحمد", paymentSystem: "شهري", overdueAmount: 1500, tillDate: "2026-09-08", monthlyRent: 750 },
 
+{ id: 91, apartment: "ع93 / 3", tenantName: "أحمد عبدالرحمن أحمد", paymentSystem: "شهري", overdueAmount: 1500, tillDate: "2026-09-08", monthlyRent: 750 },
 
-{ id: 93, apartment: "ع93 / 6", tenantName: "حمزة طارق عبدالمالك", paymentSystem: "شهري", overdueAmount: 500, tillDate: "2026-09-08", monthlyRent: 1250 },
 
+{ id: 92, apartment: "ع93 / 6", tenantName: "حمزة طارق عبدالمالك", paymentSystem: "شهري", overdueAmount: 500, tillDate: "2026-09-08", monthlyRent: 1250 },
 
-{ id: 94, apartment: "ع93 / 9", tenantName: "أحمد ابو العلا أحمد", paymentSystem: "شهري", overdueAmount: 1164, tillDate: "2026-10-01", monthlyRent: 1167 },
 
+{ id: 93, apartment: "ع93 / 9", tenantName: "أحمد ابو العلا أحمد", paymentSystem: "شهري", overdueAmount: 1164, tillDate: "2026-10-01", monthlyRent: 1167 },
 
 
 
-{ id: 95, apartment: "ع93 / 14", tenantName: "محمد حمدو سلامة", paymentSystem: "نصف سنوي", overdueAmount: 124, tillDate: "2026-12-01", monthlyRent: 1083 },
-{ id: 96, apartment: "ع93 / 15", tenantName: "عبدالعزيز عيسي عمر ", paymentSystem: "شهري", overdueAmount: 1283, tillDate: "2026-10-01", monthlyRent: 1167 },
-{ id: 97, apartment: "ع93 / 16", tenantName: "غالب عواد عايد اللهيبي الحربي", paymentSystem: "نصف سنوي", overdueAmount: 125, tillDate: "2027-02-01", monthlyRent: 1333 },
 
+{ id: 94, apartment: "ع93 / 14", tenantName: "محمد حمدو سلامة", paymentSystem: "نصف سنوي", overdueAmount: 124, tillDate: "2026-12-01", monthlyRent: 1083 },
+{ id: 95, apartment: "ع93 / 15", tenantName: "عبدالعزيز عيسي عمر ", paymentSystem: "شهري", overdueAmount: 1283, tillDate: "2026-10-01", monthlyRent: 1167 },
+{ id: 96, apartment: "ع93 / 16", tenantName: "غالب عواد عايد اللهيبي الحربي", paymentSystem: "نصف سنوي", overdueAmount: 125, tillDate: "2027-02-01", monthlyRent: 1333 },
 
-{ id: 98, apartment: "ع127 / 3 | 4 | 5 | 6", tenantName: "عبدالله عبدالرحيم السماعيل", paymentSystem: "شهري", overdueAmount: 8330, tillDate: "2026-09-08", monthlyRent: 4167 },
-{ id: 99, apartment: "تجاري / 305 | الصيدلية", tenantName: "فايز عبدالله الأحمدي (الصيدلية و305)", paymentSystem: "ربع سنوي", overdueAmount: 25175, tillDate: "2026-11-01", monthlyRent: 5992 },
-{ id: 100, apartment: "تجاري / 43_محل1_سابقا", tenantName: "محل1 - سلطان كاسب علي  العنزي", paymentSystem: "شهري", overdueAmount: 13000, tillDate: "2026-05-01", monthlyRent: 1083 },
-{ id: 101, apartment: "تجاري / 43_محل1_سابقا", tenantName: "محل1 - مؤسسة وجد المدينة للتجارة والتسويق (يوسف موسى عبدالله القحطاني)", paymentSystem: "شهري", overdueAmount: 1250, tillDate: "2026-10-01", monthlyRent: 1250 },
-{ id: 102, apartment: "تجاري / 43_محل2", tenantName: "محل2 الملحمة - محمود معتصم غالب شاكر", paymentSystem: "شهري", overdueAmount: 1250, tillDate: "2026-09-16", monthlyRent: 1250 },
-{ id: 103, apartment: "تجاري / 43_محل3", tenantName: "محل3 (برجري) - بوفية عائشه خليل بخش", paymentSystem: "شهري", overdueAmount: 12938, tillDate: "2026-10-01", monthlyRent: 1438 },
 
+{ id: 97, apartment: "ع127 / 3 | 4 | 5 | 6", tenantName: "عبدالله عبدالرحيم السماعيل", paymentSystem: "شهري", overdueAmount: 8330, tillDate: "2026-09-08", monthlyRent: 4167 },
+{ id: 98, apartment: "تجاري / 305 | الصيدلية", tenantName: "فايز عبدالله الأحمدي (الصيدلية و305)", paymentSystem: "ربع سنوي", overdueAmount: 25175, tillDate: "2026-11-01", monthlyRent: 5992 },
+{ id: 99, apartment: "تجاري / 43_محل1_سابقا", tenantName: "محل1 - سلطان كاسب علي  العنزي", paymentSystem: "شهري", overdueAmount: 13000, tillDate: "2026-05-01", monthlyRent: 1083 },
+{ id: 100, apartment: "تجاري / 43_محل1_سابقا", tenantName: "محل1 - مؤسسة وجد المدينة للتجارة والتسويق (يوسف موسى عبدالله القحطاني)", paymentSystem: "شهري", overdueAmount: 1250, tillDate: "2026-10-01", monthlyRent: 1250 },
+{ id: 101, apartment: "تجاري / 43_محل2", tenantName: "محل2 الملحمة - محمود معتصم غالب شاكر", paymentSystem: "شهري", overdueAmount: 1250, tillDate: "2026-09-16", monthlyRent: 1250 },
+{ id: 102, apartment: "تجاري / 43_محل3", tenantName: "محل3 (برجري) - بوفية عائشه خليل بخش", paymentSystem: "شهري", overdueAmount: 12938, tillDate: "2026-10-01", monthlyRent: 1438 },
 
-{ id: 104, apartment: "تجاري / 43_محل5", tenantName: "محل5 - خلود عوض عويض الرشيدي (عرفان الحلاق)", paymentSystem: "شهري", overdueAmount: 1150, tillDate: "2026-10-01", monthlyRent: 1150 },
 
+{ id: 103, apartment: "تجاري / 43_محل5", tenantName: "محل5 - خلود عوض عويض الرشيدي (عرفان الحلاق)", paymentSystem: "شهري", overdueAmount: 1150, tillDate: "2026-10-01", monthlyRent: 1150 },
 
 
 
 
 
-{ id: 105, apartment: "تجاري / سلطانة_م2", tenantName: "الأصيل والسفير والدفة وسكن السفير", paymentSystem: "نصف سنوي", overdueAmount: 711210, tillDate: "2027-01-01", monthlyRent: 30667 },
 
+{ id: 104, apartment: "تجاري / سلطانة_م2", tenantName: "الأصيل والسفير والدفة وسكن السفير", paymentSystem: "نصف سنوي", overdueAmount: 711210, tillDate: "2027-01-01", monthlyRent: 30667 },
 
 
 
-{ id: 106, apartment: "سلطانة / 103", tenantName: "رجب محمد نور آل حقي", paymentSystem: "شهري", overdueAmount: 850, tillDate: "2026-10-01", monthlyRent: 750 },
-{ id: 107, apartment: "سلطانة / 104", tenantName: "أمجد حسين عباس عبدالعال", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-10-01", monthlyRent: 650 },
-{ id: 108, apartment: "سلطانة / 105", tenantName: "محسن حسني السيد منسي", paymentSystem: "شهري", overdueAmount: 500, tillDate: "2026-10-01", monthlyRent: 500 },
 
-{ id: 109, apartment: "سلطانة / 107", tenantName: "سليمان سالم هنيدي العوفي", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-10-01", monthlyRent: 650 },
-{ id: 110, apartment: "سلطانة / 108", tenantName: "محمد محمود أحمد نعمه الله", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-10-01", monthlyRent: 750 },
+{ id: 105, apartment: "سلطانة / 103", tenantName: "رجب محمد نور آل حقي", paymentSystem: "شهري", overdueAmount: 850, tillDate: "2026-10-01", monthlyRent: 750 },
+{ id: 106, apartment: "سلطانة / 104", tenantName: "أمجد حسين عباس عبدالعال", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-10-01", monthlyRent: 650 },
+{ id: 107, apartment: "سلطانة / 105", tenantName: "محسن حسني السيد منسي", paymentSystem: "شهري", overdueAmount: 500, tillDate: "2026-10-01", monthlyRent: 500 },
 
-{ id: 111, apartment: "سلطانة / 110", tenantName: "إبراهيم محمد علي محمود", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-10-01", monthlyRent: 650 },
-{ id: 112, apartment: "سلطانة / 111", tenantName: "مختار حسين عبدالستار", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-10-01", monthlyRent: 550 },
+{ id: 108, apartment: "سلطانة / 107", tenantName: "سليمان سالم هنيدي العوفي", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-10-01", monthlyRent: 650 },
+{ id: 109, apartment: "سلطانة / 108", tenantName: "محمد محمود أحمد نعمه الله", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-10-01", monthlyRent: 750 },
 
+{ id: 110, apartment: "سلطانة / 110", tenantName: "إبراهيم محمد علي محمود", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-10-01", monthlyRent: 650 },
+{ id: 111, apartment: "سلطانة / 111", tenantName: "مختار حسين عبدالستار", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-10-01", monthlyRent: 550 },
 
-{ id: 113, apartment: "سلطانة / 202", tenantName: "محمد محمود أحمد غازي", paymentSystem: "شهري", overdueAmount: 1500, tillDate: "2026-10-01", monthlyRent: 750 },
-{ id: 114, apartment: "سلطانة / 203", tenantName: "محمود حسن عبداللطيف الشال ", paymentSystem: "شهري", overdueAmount: 200, tillDate: "2026-10-01", monthlyRent: 650 },
-{ id: 115, apartment: "سلطانة / 204", tenantName: "حسام جمال صلاح محمد", paymentSystem: "شهري", overdueAmount: 700, tillDate: "2026-10-01", monthlyRent: 700 },
 
+{ id: 112, apartment: "سلطانة / 202", tenantName: "محمد محمود أحمد غازي", paymentSystem: "شهري", overdueAmount: 1500, tillDate: "2026-10-01", monthlyRent: 750 },
+{ id: 113, apartment: "سلطانة / 203", tenantName: "محمود حسن عبداللطيف الشال ", paymentSystem: "شهري", overdueAmount: 200, tillDate: "2026-10-01", monthlyRent: 650 },
+{ id: 114, apartment: "سلطانة / 204", tenantName: "حسام جمال صلاح محمد", paymentSystem: "شهري", overdueAmount: 700, tillDate: "2026-10-01", monthlyRent: 700 },
 
 
 
-{ id: 116, apartment: "سلطانة / 209", tenantName: "احمد محمد عبدالعزيز أحمد", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-10-01", monthlyRent: 550 },
 
-{ id: 117, apartment: "سلطانة / 211", tenantName: "محمد سعيد محمد الشور", paymentSystem: "شهري", overdueAmount: 500, tillDate: "2026-10-01", monthlyRent: 500 },
+{ id: 115, apartment: "سلطانة / 209", tenantName: "احمد محمد عبدالعزيز أحمد", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-10-01", monthlyRent: 550 },
 
+{ id: 116, apartment: "سلطانة / 211", tenantName: "محمد سعيد محمد الشور", paymentSystem: "شهري", overdueAmount: 500, tillDate: "2026-10-01", monthlyRent: 500 },
 
-{ id: 118, apartment: "سلطانة / 302", tenantName: "عبدالحميد إبراهيم حسن الكردي", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-10-01", monthlyRent: 750 },
-{ id: 119, apartment: "سلطانة / 303", tenantName: "فايز احمد خان ", paymentSystem: "شهري", overdueAmount: 700, tillDate: "2026-10-01", monthlyRent: 700 },
 
-{ id: 120, apartment: "سلطانة / 305", tenantName: "إبراهيم فاروق فرج", paymentSystem: "شهري", overdueAmount: 4400, tillDate: "2026-10-01", monthlyRent: 550 },
-{ id: 121, apartment: "سلطانة / 306", tenantName: "نويل باكاس جو", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-10-01", monthlyRent: 550 },
-{ id: 122, apartment: "سلطانة / 307", tenantName: "محمد بندر غازي الحربي", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-10-01", monthlyRent: 700 },
+{ id: 117, apartment: "سلطانة / 302", tenantName: "عبدالحميد إبراهيم حسن الكردي", paymentSystem: "شهري", overdueAmount: 750, tillDate: "2026-10-01", monthlyRent: 750 },
+{ id: 118, apartment: "سلطانة / 303", tenantName: "فايز احمد خان ", paymentSystem: "شهري", overdueAmount: 700, tillDate: "2026-10-01", monthlyRent: 700 },
 
+{ id: 119, apartment: "سلطانة / 305", tenantName: "إبراهيم فاروق فرج", paymentSystem: "شهري", overdueAmount: 4400, tillDate: "2026-10-01", monthlyRent: 550 },
+{ id: 120, apartment: "سلطانة / 306", tenantName: "نويل باكاس جو", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-10-01", monthlyRent: 550 },
+{ id: 121, apartment: "سلطانة / 307", tenantName: "محمد بندر غازي الحربي", paymentSystem: "شهري", overdueAmount: 550, tillDate: "2026-10-01", monthlyRent: 700 },
 
 
 
 
-{ id: 123, apartment: "سلطانة / 311", tenantName: "محروس احمد محروس عيسى", paymentSystem: "شهري", overdueAmount: 600, tillDate: "2026-10-01", monthlyRent: 600 },
-{ id: 124, apartment: "سلطانة / 312", tenantName: "محمد جودة علي حسن", paymentSystem: "شهري", overdueAmount: 450, tillDate: "2026-10-01", monthlyRent: 450 },
 
+{ id: 122, apartment: "سلطانة / 311", tenantName: "محروس احمد محروس عيسى", paymentSystem: "شهري", overdueAmount: 600, tillDate: "2026-10-01", monthlyRent: 600 },
+{ id: 123, apartment: "سلطانة / 312", tenantName: "محمد جودة علي حسن", paymentSystem: "شهري", overdueAmount: 450, tillDate: "2026-10-01", monthlyRent: 450 },
 
-{ id: 125, apartment: "سلطانة / 402", tenantName: "ربيع عبدالواحد محمد عبدالواحد", paymentSystem: "شهري", overdueAmount: 50, tillDate: "2026-09-05", monthlyRent: 750 },
-{ id: 126, apartment: "سلطانة / 403", tenantName: "إسلام أحمد أخضر", paymentSystem: "شهري", overdueAmount: 1300, tillDate: "2026-09-15", monthlyRent: 650 },
-{ id: 127, apartment: "سلطانة / 404", tenantName: "رعد مهدي الكثيري", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-10-01", monthlyRent: 650 },
-{ id: 128, apartment: "سلطانة / 405 | 411", tenantName: "احمد عبدالله عارف (غ405 و411)", paymentSystem: "شهري", overdueAmount: 1651, tillDate: "2026-10-01", monthlyRent: 1100 },
 
-{ id: 129, apartment: "سلطانة / 407", tenantName: "أحمد علي السيد الدبيكي", paymentSystem: "شهري", overdueAmount: 600, tillDate: "2026-10-01", monthlyRent: 600 },
+{ id: 124, apartment: "سلطانة / 402", tenantName: "ربيع عبدالواحد محمد عبدالواحد", paymentSystem: "شهري", overdueAmount: 50, tillDate: "2026-09-05", monthlyRent: 750 },
+{ id: 125, apartment: "سلطانة / 403", tenantName: "إسلام أحمد أخضر", paymentSystem: "شهري", overdueAmount: 1300, tillDate: "2026-09-15", monthlyRent: 650 },
+{ id: 126, apartment: "سلطانة / 404", tenantName: "رعد مهدي الكثيري", paymentSystem: "شهري", overdueAmount: 650, tillDate: "2026-10-01", monthlyRent: 650 },
+{ id: 127, apartment: "سلطانة / 405 | 411", tenantName: "احمد عبدالله عارف (غ405 و411)", paymentSystem: "شهري", overdueAmount: 1651, tillDate: "2026-10-01", monthlyRent: 1100 },
 
+{ id: 128, apartment: "سلطانة / 407", tenantName: "أحمد علي السيد الدبيكي", paymentSystem: "شهري", overdueAmount: 600, tillDate: "2026-10-01", monthlyRent: 600 },
 
 
 
-{ id: 130, apartment: "سلطانة / 412 | 409", tenantName: "مهران عبدالماجد أحمد فوده", paymentSystem: "شهري", overdueAmount: 900, tillDate: "2026-10-01", monthlyRent: 900 },
-{ id: 131, apartment: "سلطانة / الملحق", tenantName: "محمد احمد قرشي تركي", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 1000 },
 
-{ id: 132, apartment: "سلطانة / شقة 5 فيلا", tenantName: "جمال جوهر عربود جوهر", paymentSystem: "شهري", overdueAmount: 4400, tillDate: "2026-10-01", monthlyRent: 600 },
-{ id: 133, apartment: "سلطانة / شقة 4 فيلا", tenantName: "عبدالناصر خلق مهران", paymentSystem: "شهري", overdueAmount: 7100, tillDate: "2026-10-01", monthlyRent: 900 },
-{ id: 134, apartment: "سلطانة / شقة 3 فيلا", tenantName: "وسيم واجد حسين", paymentSystem: "شهري", overdueAmount: 900, tillDate: "2026-10-01", monthlyRent: 900 },
+{ id: 129, apartment: "سلطانة / 412 | 409", tenantName: "مهران عبدالماجد أحمد فوده", paymentSystem: "شهري", overdueAmount: 900, tillDate: "2026-10-01", monthlyRent: 900 },
+{ id: 130, apartment: "سلطانة / الملحق", tenantName: "محمد احمد قرشي تركي", paymentSystem: "شهري", overdueAmount: 1000, tillDate: "2026-10-01", monthlyRent: 1000 },
+
+{ id: 131, apartment: "سلطانة / شقة 5 فيلا", tenantName: "جمال جوهر عربود جوهر", paymentSystem: "شهري", overdueAmount: 4400, tillDate: "2026-10-01", monthlyRent: 600 },
+{ id: 132, apartment: "سلطانة / شقة 4 فيلا", tenantName: "عبدالناصر خلق مهران", paymentSystem: "شهري", overdueAmount: 7100, tillDate: "2026-10-01", monthlyRent: 900 },
+{ id: 133, apartment: "سلطانة / شقة 3 فيلا", tenantName: "وسيم واجد حسين", paymentSystem: "شهري", overdueAmount: 900, tillDate: "2026-10-01", monthlyRent: 900 },
 
 
 
@@ -2241,7 +2240,7 @@
 [ "ع.43", "ع43 / 304", "عايض فارس بن عايض الرشيدي", 1000, "late", "2026-10-01", 2500, "2025-11-01", 11, 11000, 8500 ],
 [ "ع.43", "ع43 / 306", "عطيه مبروك مبارك ", 750, "paid", "2026-09-08", -750, "2026-01-08", 8, 6000, 6750 ],
 [ "ع.43", "ع43 / 307", "محمد فريد العيسوي", 600, "paid", "2026-09-03", 0, "2026-01-03", 8, 4800, 4800 ],
-[ "ع.43", "ع43 / 308", "مهند عبدالله سالم الحجوري", 1050, "late", "2027-09-01", 12475, "2025-09-01", 24, 25200, 12725 ],
+[ "ع.43", "ع43 / 308", "مهند عبدالله سالم الحجوري", 1050, "late", "2026-10-01", 925, "2025-09-01", 13, 13650, 12725 ],
 [ "ع.43", "ع43 / 309", "عماد مهل صالح العنزي", 1000, "paid", "2026-10-01", 0, "2026-01-01", 9, 9000, 9000 ],
 [ "ع.43", "ع43 / 310 سابقا", "فياض مزمل خان", 0, "paid", "2026-05-25", 0, "2025-12-25", 5, 4250, 4250 ],
 [ "ع.43", "ع43 / 310", "سهيل عابد حسين أحمد", 850, "late", "2026-09-25", 850, "2026-05-25", 4, 3550, 2700 ],
@@ -2269,8 +2268,8 @@
 [ "ع.43", "ع43 / البدروم1 | البدروم2 | غرفة الحارس", "مؤسسة عبد الله البليمي", 2500, "paid", "2027-01-01", 0, "2026-01-01", 12, 30000, 30000 ],
 [ "ع.43", "ع43 / 303", "عثمان سيدي (الجامعة الإسلامية)", 1100, "paid", "2026-09-09", 0, "2026-01-09", 8, 8950, 8950 ],
 [ "ع.51", "ع51 / 1", "وليد حسين الخليفه المحجوب", 1167, "late", "2026-09-04", 4825, "2025-07-04", 14, 16333, 11508 ],
-[ "ع.51", "ع51 / 2 سابقا", "خالد حمدان سعيد الراعي", 0, "late", "2027-02-01", 5000, "2025-03-01", 23, 23000, 18000 ],
-[ "ع.51", "ع51 / 2", "عزت إبراهيم عبدالنعيم عبدالصمد", 1000, "late", "2027-03-01", 6000, "2026-09-01", 6, 6000, 0 ],
+[ "ع.51", "ع51 / 2 سابقا", "خالد حمدان سعيد الراعي", 0, "paid", "2026-09-01", 0, "2025-03-01", 18, 18000, 18000 ],
+[ "ع.51", "ع51 / 2", "عزت إبراهيم عبدالنعيم عبدالصمد", 1000, "late", "2026-10-01", 1000, "2026-09-01", 1, 1000, 0 ],
 [ "ع.51", "ع51 / 3", "احمد صالح عبدالمعين حسوبه", 1417, "paid", "2026-11-01", 0, "2025-11-01", 12, 17000, 17000 ],
 [ "ع.51", "ع51 / 4", "حاتم عبدالحميد عبدالرحمن أبو خضير", 1667, "paid", "2026-10-01", 0, "2025-06-01", 16, 26667, 26666 ],
 [ "ع.51", "ع51 / 5", "فهد غانم جري جعد السحيمي", 1917, "paid", "2026-10-01", -2590, "2026-01-01", 9, 17250, 19840 ],
@@ -2456,7 +2455,7 @@
 
  ];
 let allTransactionsTable = recentPaymentsTable.map(p => ({ id:p.id, date:p.date, tenantName:p.tenantName, amount:p.amount, type:p.type, description:p.description }));
-const overviewData = { buildingsCount:18, overdueCount:134, amountToBePaid:6082797, amountPaid:5090824, residentialOverdue:312256, commercialOverdue:679719 };
+const overviewData = { buildingsCount:18, overdueCount:133, amountToBePaid:6061247, amountPaid:5090824, residentialOverdue:290706, commercialOverdue:679719 };
 
 
 
